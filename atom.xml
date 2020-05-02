@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ply.cool/"/>
-  <updated>2020-04-29T13:29:35.555Z</updated>
+  <updated>2020-05-02T15:04:58.387Z</updated>
   <id>http://ply.cool/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title> 第一篇博文</title>
+    <link href="http://ply.cool/2020/05/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/"/>
+    <id>http://ply.cool/2020/05/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</id>
+    <published>2020-05-02T15:02:34.000Z</published>
+    <updated>2020-05-02T15:04:58.387Z</updated>
+    
+    <content type="html"><![CDATA[<p>生活不止眼前的苟且，还有诗和远方。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;生活不止眼前的苟且，还有诗和远方。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="博文" scheme="http://ply.cool/tags/%E5%8D%9A%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
