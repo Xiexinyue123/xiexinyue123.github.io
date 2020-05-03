@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ply.cool/categories/index.html</loc>
+    
+    <lastmod>2020-05-03T03:00:28.956Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ply.cool/tags/index.html</loc>
     
     <lastmod>2020-05-03T02:47:43.114Z</lastmod>
