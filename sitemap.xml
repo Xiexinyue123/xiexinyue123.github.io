@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ply.cool/about/index.html</loc>
+    <loc>http://ply.cool/2020/06/05/VS-Code%E9%85%8D%E7%BD%AEC%E7%8E%AF%E5%A2%83/</loc>
     
-    <lastmod>2020-05-23T00:58:49.529Z</lastmod>
+    <lastmod>2020-06-05T01:23:25.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/2020/05/16/C-%E5%AE%9E%E7%8E%B0QQ%E6%B6%88%E6%81%AF%E8%BD%B0%E7%82%B8/</loc>
+    
+    <lastmod>2020-06-02T06:32:21.264Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/2020/05/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</loc>
+    
+    <lastmod>2020-06-02T05:52:56.924Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/tags/index.html</loc>
+    
+    <lastmod>2020-06-02T03:20:23.982Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ply.cool/link/index.html</loc>
     
-    <lastmod>2020-05-22T10:22:35.712Z</lastmod>
+    <lastmod>2020-06-02T03:19:49.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/categories/index.html</loc>
+    
+    <lastmod>2020-06-02T03:19:04.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/about/index.html</loc>
+    
+    <lastmod>2020-06-02T01:31:22.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ply.cool/messageboard/index.html</loc>
+    
+    <lastmod>2020-05-27T11:33:27.824Z</lastmod>
     
   </url>
   
@@ -19,27 +61,6 @@
     <loc>http://ply.cool/2020/05/03/%E5%8D%9A%E5%AE%A2%E5%BC%80%E9%80%9A%E8%87%B4%E8%BE%9E/</loc>
     
     <lastmod>2020-05-21T07:20:45.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ply.cool/2020/05/16/C-%E5%AE%9E%E7%8E%B0QQ%E6%B6%88%E6%81%AF%E8%BD%B0%E7%82%B8/</loc>
-    
-    <lastmod>2020-05-21T06:59:01.628Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ply.cool/categories/index.html</loc>
-    
-    <lastmod>2020-05-03T03:00:28.956Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ply.cool/tags/index.html</loc>
-    
-    <lastmod>2020-05-03T02:47:43.114Z</lastmod>
     
   </url>
   
