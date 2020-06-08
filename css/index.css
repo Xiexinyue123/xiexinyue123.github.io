@@ -100,8 +100,8 @@ hr:before {
   transition: all 1s ease-in-out;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-  font-family: FontAwesome;
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
 }
 iframe {
   margin: 0 0 1rem;
@@ -3328,7 +3328,7 @@ blockquote footer cite:before {
   position: absolute;
   top: calc(50% - 0.35rem);
   color: #f47466;
-  content: '\f0c1';
+  content: '\f5a1';
   font-style: normal;
   font-variant: normal;
   line-height: 1;
@@ -3339,8 +3339,8 @@ blockquote footer cite:before {
   transition: all 0.2s ease-out;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-  font-family: FontAwesome;
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
 }
 #article-container h1:hover:before,
 #article-container h2:hover:before,
@@ -4560,7 +4560,8 @@ figure.gallery-group .gallery-group-name:after {
   top: 13px;
   left: 15px;
   font-size: larger;
-  font-family: 'FontAwesome';
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
 }
 .note.default {
   background-color: #f7f7f7;
