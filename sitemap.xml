@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ply.cool/about/index.html</loc>
+    
+    <lastmod>2020-06-10T16:30:50.869Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ply.cool/2020/05/26/VS%20Code%E9%85%8D%E7%BD%AEC++%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2020-06-08T12:21:59.037Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://ply.cool/2020/05/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</loc>
     
     <lastmod>2020-06-08T11:05:26.066Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ply.cool/about/index.html</loc>
-    
-    <lastmod>2020-06-08T10:45:15.474Z</lastmod>
     
   </url>
   
