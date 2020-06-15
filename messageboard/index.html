@@ -59,6 +59,8 @@
 
 var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
 var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
+let friends = 'd943b664b0d43a50c722af1c4e987486'.split(',')
+let master = 'dccd8f4a1e5a25681436b478fbcfa0ae'.split(',')
 
 window.valine = new Valine({
   el:'#vcomment',
@@ -76,7 +78,10 @@ window.valine = new Valine({
   emojiCDN: '',
   emojiMaps: "",
   enableQQ: true,
-  requiredFields: requiredFields
+  requiredFields: requiredFields,
+  master: master,
+  friends: friends,
+  metaPlaceholder: 
 });</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Coder.Xie</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="158986311361" m="1"></script>  愿世间美好与你环环相扣！</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = false;
 document.body.addEventListener('input', POWERMODE);
