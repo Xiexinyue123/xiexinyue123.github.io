@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.ply.cool/about/index.html</loc>
+    
+    <lastmod>2020-06-27T12:21:17.913Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.ply.cool/2020/05/03/%E5%8D%9A%E5%AE%A2%E5%BC%80%E9%80%9A%E8%87%B4%E8%BE%9E/</loc>
     
     <lastmod>2020-06-26T14:46:20.808Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://blog.ply.cool/tags/index.html</loc>
     
     <lastmod>2020-06-16T01:53:46.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/about/index.html</loc>
-    
-    <lastmod>2020-06-14T14:37:43.269Z</lastmod>
     
   </url>
   
