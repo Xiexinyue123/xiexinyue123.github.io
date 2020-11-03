@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.ply.cool/gallery/recollect/index.html</loc>
+    
+    <lastmod>2020-11-03T11:05:30.961Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.ply.cool/gallery/index.html</loc>
+    
+    <lastmod>2020-11-03T11:01:32.533Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.ply.cool/2020/10/30/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/</loc>
     
     <lastmod>2020-10-30T15:05:01.432Z</lastmod>
@@ -89,27 +103,6 @@
     <loc>http://blog.ply.cool/2020/06/12/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%B0%8F%E6%A0%87%E7%AD%BE/</loc>
     
     <lastmod>2020-07-01T04:50:32.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/gallery/index.html</loc>
-    
-    <lastmod>2020-06-21T09:15:53.770Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/gallery/wallpaper/index.html</loc>
-    
-    <lastmod>2020-06-21T06:15:57.119Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/gallery/recollect/index.html</loc>
-    
-    <lastmod>2020-06-21T05:50:38.115Z</lastmod>
     
   </url>
   
