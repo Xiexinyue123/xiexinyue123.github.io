@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Java学习笔记_01</title>
+      <link href="/2020/11/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/"/>
+      <url>/2020/11/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul><li>JDK : Java开发者工具。</li><li>JRE : Java运行环境。(JDK中包含JRE)</li><li>JVM :  Java虚拟机。</li></ul><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java01.jpg" alt=""></p><h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><ul><li><p>long类型要在数字后面加个L</p><p>例如：<code>long num = 30L;</code></p></li><li><p>float类型要在数字后面加个F</p><p>例如：<code>flaot num = 50.1F;</code></p></li><li><p>字符</p><div class="note info">            <p><code>char</code>只能输单个字符</p>          </div><p>例如：<code>char name = &#39;国&#39;;</code> <code>char name = &#39;A&#39;;</code></p></li><li><p>字符串</p><div class="note info">            <p><code>String</code>不是关键字，是类</p>          </div><p>例如：<code>String name = &quot;蔡徐坤&quot;;</code></p></li></ul><h2 id="浮点数拓展"><a href="#浮点数拓展" class="headerlink" title="浮点数拓展"></a>浮点数拓展</h2><ul><li><p>浮点数<code>有限</code>，<code>离散</code>，<code>舍入误差</code>，<code>大约</code>，<code>接近但不等于</code></p><div class="note warning">            <p>最好完全避免使用浮点数进行比较</p>          </div></li><li><p>常用BigDecimal（数学工具类）进行比较</p><p>例如：银行业务表示。</p></li></ul><h2 id="字符拓展"><a href="#字符拓展" class="headerlink" title="字符拓展"></a>字符拓展</h2><ul><li><p>所有的字符本质还是数字</p><p>使用int强制转换可以使字符转换为对应Unicode编码表原数值。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c1 = <span class="string">'a'</span>;</span><br><span class="line">System.out.println((<span class="keyword">int</span>)c1);<span class="comment">//打印结果为97(十进制)</span></span><br><span class="line"><span class="keyword">char</span> c2 = <span class="string">'\u0061'</span>;<span class="comment">//61为十六进制数</span></span><br><span class="line">System.out.println(c2);<span class="comment">//打印结果为a</span></span><br></pre></td></tr></table></figure></li><li><p>转义字符</p><ul><li><code>\t</code> 制表符 (相当于Tab)</li><li><code>\n</code> 换行</li><li>……</li></ul></li></ul><h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">低-------------------------------------&gt;高(容量)</span><br><span class="line">byte,short,char-&gt;int-&gt;long-&gt;float-&gt;double</span><br></pre></td></tr></table></figure><ol><li><p>强制类型转换(由高转向低)</p><p><code>(类型)变量名</code></p></li><li><p>自动类型转换(由低转向高)</p></li></ol><div class="note warning">            <p>注意点：</p><ol><li>不能对布尔值进行转换</li><li>不能把对象类型转换为不相干的类型</li><li>在把高容量转换到低容量时，强制转换</li><li>转换的时候可能存在内存溢出，或者精度问题</li></ol>          </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML表单相关内容复习_02</title>
       <link href="/2020/10/30/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/"/>
       <url>/2020/10/30/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/</url>
