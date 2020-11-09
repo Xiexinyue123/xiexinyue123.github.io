@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.ply.cool/2020/11/09/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-02/</loc>
-    
-    <lastmod>2020-11-09T14:32:02.890Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/2020/11/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/</loc>
-    
-    <lastmod>2020-11-08T15:07:25.551Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.ply.cool/2020/10/30/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/</loc>
     
-    <lastmod>2020-11-04T14:44:15.793Z</lastmod>
+    <lastmod>2020-11-09T15:14:53.818Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.ply.cool/2020/10/26/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-01/</loc>
     
-    <lastmod>2020-11-04T14:41:45.386Z</lastmod>
+    <lastmod>2020-11-09T15:14:44.414Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.ply.cool/2020/10/25/JavaSrcipt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-02/</loc>
+    
+    <lastmod>2020-11-09T15:14:27.628Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.ply.cool/2020/09/21/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_01/</loc>
+    
+    <lastmod>2020-11-09T15:14:02.989Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.ply.cool/2020/11/09/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-02/</loc>
+    
+    <lastmod>2020-11-09T15:13:34.102Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.ply.cool/2020/11/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/</loc>
+    
+    <lastmod>2020-11-09T15:12:19.539Z</lastmod>
     
   </url>
   
@@ -40,20 +54,6 @@
     <loc>http://blog.ply.cool/gallery/index.html</loc>
     
     <lastmod>2020-11-03T11:01:32.533Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/2020/10/25/JavaSrcipt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-02/</loc>
-    
-    <lastmod>2020-10-30T12:40:44.304Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ply.cool/2020/09/21/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_01/</loc>
-    
-    <lastmod>2020-10-30T12:40:34.379Z</lastmod>
     
   </url>
   
