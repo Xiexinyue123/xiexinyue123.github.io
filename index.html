@@ -1,50 +1,171 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>百般美好 - XY's Blog</title><meta name="description" content="一个收藏回忆与记录学习的地方！"><meta name="keywords" content="百般美好,Coder.Xie,个人博客,博客,java,技术,学习,技术分享,学习笔记,前端,全栈,前端程序员,JavaScript,生活"><meta name="author" content="Coder.Xie"><meta name="copyright" content="Coder.Xie"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="百般美好"><meta name="twitter:description" content="一个收藏回忆与记录学习的地方！"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><meta property="og:type" content="website"><meta property="og:title" content="百般美好"><meta property="og:url" content="https://ply.cool/"><meta property="og:site_name" content="百般美好"><meta property="og:description" content="一个收藏回忆与记录学习的地方！"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><meta property="article:published_time" content="2020-12-02T10:28:15.189Z"><meta property="article:modified_time" content="2020-12-02T10:28:15.189Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://ply.cool/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>百般美好 - XY's Blog</title><meta name="keywords" content="百般美好,Coder.Xie,个人博客,博客,java,技术,学习,技术分享,学习笔记,前端,全栈,前端程序员,JavaScript,生活"><meta name="author" content="Coder.Xie"><meta name="copyright" content="Coder.Xie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一个收藏回忆与记录学习的地方！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="百般美好">
+<meta property="og:url" content="https://ply.cool/index.html">
+<meta property="og:site_name" content="百般美好">
+<meta property="og:description" content="一个收藏回忆与记录学习的地方！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG">
+<meta property="article:author" content="Coder.Xie">
+<meta property="article:tag" content="百般美好,Coder.Xie,个人博客,博客,java,技术,学习,技术分享,学习笔记,前端,全栈,前端程序员,JavaScript,生活">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><link rel="canonical" href="https://ply.cool/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
   copy: {
     success: '复制成功',
     error: '复制错误',
     noSupport: '浏览器不支持'
   },
-  bookmark: {
-    message_prev: '按',
-    message_next: '键将本页加入书签'
+  relativeDate: {
+    homepage: false,
+    post: false
   },
-  runtime_unit: '天',
-  runtime: true,
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
   copyright: undefined,
-  ClickShowText: {"text":"啾咪","fontSize":"15px"},
-  medium_zoom: false,
-  fancybox: true,
+  ClickShowText: {"text":"啾咪,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'fancybox',
   Snackbar: undefined,
-  baiduPush: false,
-  highlightCopy: true,
-  highlightLang: true,
-  highlightShrink: 'false',
-  isFontAwesomeV5: true,
-  isPhotoFigcaption: false
-  
-}</script><script>var GLOBAL_CONFIG_SITE = { 
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
   isPost: false,
   isHome: true,
-  isSidebar: false  
-  }</script><noscript><style>
-#page-header {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO/butterfly/css/pool.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/footer.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/iconfont.min.css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="百般美好" type="application/atom+xml">
-</head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="https://music.ply.cool/" target="_blank" rel="noopener"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-bars" aria-hidden="true"></i><span> 管理</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://image.avosapps.us/" target="_blank" rel="noopener"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" href="https://player.lmih.cn/" target="_blank" rel="noopener"><i class="fa-fw fa fa-headphones"></i><span> 音乐播放器管理页面</span></a></li><li><a class="site-page" href="https://github.com/Xiexinyue123/image/upload/master" target="_blank" rel="noopener"><i class="fa-fw fas fa-images"></i><span> GitHub图床管理页面</span></a></li><li><a class="site-page" href="https://console.leancloud.app/login.html#/signin" target="_blank" rel="noopener"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="full_page" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/Xiexinyue123/image/ff4.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">百般美好</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="https://music.ply.cool/" target="_blank" rel="noopener"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-bars" aria-hidden="true"></i><span> 管理</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://image.avosapps.us/" target="_blank" rel="noopener"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" href="https://player.lmih.cn/" target="_blank" rel="noopener"><i class="fa-fw fa fa-headphones"></i><span> 音乐播放器管理页面</span></a></li><li><a class="site-page" href="https://github.com/Xiexinyue123/image/upload/master" target="_blank" rel="noopener"><i class="fa-fw fas fa-images"></i><span> GitHub图床管理页面</span></a></li><li><a class="site-page" href="https://console.leancloud.app/login.html#/signin" target="_blank" rel="noopener"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="site-info"><h1 id="site_title">百般美好</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2" aria-hidden="true"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin1" aria-hidden="true"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2" aria-hidden="true"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1" aria-hidden="true"></i></a></div></div><div id="scroll_down"><i class="fa fa-angle-down scroll-down-effects"></i></div></div><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/wyiyun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网抑云人生"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">网抑云人生</a><div class="article-meta-wrap"><span class="article-meta"><i class="fa fa-thumb-tack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><time class="post-meta__date" title="发表于 2020-11-15 12:38:10"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-15</time></div><div class="content">今天你网抑云了吗？？？
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-12-02 23:05:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO/butterfly/css/pool.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/footer.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/iconfont.min.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="百般美好" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://player.lmih.cn/"><i class="fa-fw fa fa-headphones"></i><span> 音乐播放器管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://github.com/Xiexinyue123/image/upload/master"><i class="fa-fw fas fa-images"></i><span> GitHub图床管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/Xiexinyue123/image/ff4.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">百般美好</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://player.lmih.cn/"><i class="fa-fw fa fa-headphones"></i><span> 音乐播放器管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://github.com/Xiexinyue123/image/upload/master"><i class="fa-fw fas fa-images"></i><span> GitHub图床管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">百般美好</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin1"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/wyiyun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网抑云人生"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">网抑云人生</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-15T04:38:10.000Z" title="发表于 2020-11-15 12:38:10">2020-11-15</time></span></div><div class="content">今天你网抑云了吗？？？
 
 😭😭😭
 
 
 
-11.15更小时候总喜欢和小伙伴躺在楼顶上抬头看着天上那片深邃的星空。而且每当有流星划过，他们就喊：“快看有流星！快许愿！”然后大家都纷纷闭上眼睛沉浸在自己的想象之中许下了那个不知道能不能实现的愿望。我也跟着闭着眼，可我并没有许愿，我只是在想：流星可能是 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java异常"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">Java异常</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-30 19:03:49"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">什么是异常
+11.15更小时候总喜欢和小伙伴躺在楼顶上抬头看着天上那片深邃的星空。而且每当有流星划过，他们就喊：“快看有流星！快许愿！”然后大家都纷纷闭上眼睛沉浸在自己的想象之中许下了那个不知道能不能实现的愿望。我也跟着闭着眼，可我并没有许愿，我只是在想：流星可能是因为背负得太多，所以才会坠落的吧？…
+
+
+人有三样东西是无法隐瞒的，咳嗽、穷困和爱；你想隐瞒越欲盖弥彰。人有三样东西是不该挥霍的，身体、金钱和爱；你想挥霍却得不偿失。人有三样东西是无法挽留的，时间、生命和爱；你想挽留却渐行渐远。人有三样东西是不该回忆的，灾难、死亡和爱；你想回忆却苦不堪言。 ——《洛丽塔》
+
+
+毋庸置疑，好的事情总会到来，而当它来晚时，也不失为一种惊喜。 — —《托斯卡纳艳阳下》
+
+
+
+所念皆星河，星河中是你。 所念皆生死，生死中无你。 所念皆为生，只为再见你。 所念皆为死，只为不见你。终失故人心，空留我一人。 所念为孤独，孤独亦可喜。 ————笙之殇
+
+
+那些说星星亮的人一定没有看过你的眼睛。你眼中有春与秋，胜过我见过爱过的一切山川与河流。 遇见你开始，星河皆你。
+
+
+我总 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java异常"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">Java异常</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-30T11:03:49.000Z" title="发表于 2020-11-30 19:03:49">2020-11-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">什么是异常
 软件程序在运行过程中，遇到的情况不可能是非常完美的，可能会存在各种问题，我们称为异常，英文：Exception，要让我们写出的程序作出合理的处理，而不至于程序崩溃。异常发生在程序运行期间，它影响了正常程序的执行流程。
 异常分类：
 检查性异常
@@ -54,7 +175,18 @@
 
 
 
-异常处理机 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面向对象"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">Java面向对象</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-18 20:04:01"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-18</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">什么是面向对象
+异常处理机制
+抛出异常
+
+捕获异常
+
+异常处理五个关键字
+
+try，catch，finally，throw，throws
+
+
+Demo.java
+12345678910111213141516171819202122package cool.exception;public class Demo1 &#123;    public static void main(String[] args) &#123;        int a = 1;        int b = 0;        //假设要捕获多个异常：从小到大！        try &#123;   //try监控区域            System.out.println(a/b);        &#125;catch (Er ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面向对象"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">Java面向对象</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-18T12:04:01.000Z" title="发表于 2020-11-18 20:04:01">2020-11-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">什么是面向对象
 Java的核心思想就是OOP(面向对象编程) 
 面向过程思想：
 步骤清晰简单，第一步做什么，第二步做什么
@@ -71,10 +203,31 @@ Java的核心思想就是OOP(面向对象编程)
 面向对象的本质
 以类的方式组织代码，以对象的形式组织(封装)数据 
 
-三 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java数组"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">Java数组</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-16 18:14:36"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-16</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">数组的定义
+三大特性：
+
+封装
+继承
+多态
+
+
+
+回顾方法的定义123456789101112131415161718192021public class Demo01 &#123;    //main方法    public static void main(String[] args) &#123;    &#125;    /*    修饰符 返回值类型 方法名(...)&#123;        //方法体        return 返回值;    &#125;     */    //return 结束方法，返回一个结果！    public String sayHello()&#123;        return &quot;hello,world&quot;;    &#125;     ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java数组"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">Java数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-16T10:14:36.000Z" title="发表于 2020-11-16 18:14:36">2020-11-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">数组的定义
 数组是相同类型数据的有序集合。
 
-数组的声明创建123456789101112131415161718192021//声明一个数组int[] nums;//1.声明一个数组int nums2[];//两种方法都可以声明一个整型数组，但建议使用第一个nums = new int[10];/ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java方法"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">Java方法</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-14 22:26:42"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-14</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">何谓方法
+数组的声明创建123456789101112131415161718192021//声明一个数组int[] nums;//1.声明一个数组int nums2[];//两种方法都可以声明一个整型数组，但建议使用第一个nums = new int[10];//2.创建一个数组//也可以这样写int[] nums = new int[10];//声明并创建一个数组//3.给数组元素赋值nums[0] = 1;nums[1] = 2;nums[2] = 3;nums[3] = 4;nums[4] = 5;nums[5] = 6;nums[6] = 7;nums[7] = 8;nums[8] = 9;nums[9] = 10;//int类型数组未赋值的元素默认值是0
+
+
+
+
+获取数组长度：arrays.length。
+
+123456//计算所有元素的和int sum = 0;for (int i = 0;i&lt;nums.length;i++)&#123;    sum = sum + nums[i];&#125;
+
+
+
+内存分析
+三种初始化
+静态 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java方法"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">Java方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-14T14:26:42.000Z" title="发表于 2020-11-14 22:26:42">2020-11-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">何谓方法
 System.out.println()   //类.对象.方法//调用系统类中的标准输出对象out中的方法println()
 
 方法是语句的集合，他们在一起执行一个功能
@@ -84,7 +237,16 @@ System.out.println()   //类.对象.方法//调用系统类中的标准输出对
 方法在程序中被创建，在其它地方被引用
 
 
-原子性：一个方法 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="Java流程控制">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java流程控制"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="Java流程控制">Java流程控制</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-09 18:36:32"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">用户交互Scannernext()方法1234567891011121314151617181920package cool.ply.base;import java.util.Scanner;public class Demo02 &#123;    public static void main ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E5%9F%BA%E7%A1%80/" title="Java基础">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E5%9F%BA%E7%A1%80/" title="Java基础">Java基础</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-11-05 19:12:36"><i class="fa fa-calendar" aria-hidden="true"></i>2020-11-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">准备工作
+原子性：一个方法只能完成一个功能，这样利于后期扩展
+
+
+方法的调用12345678910111213//main方法public static void main(String[] args) &#123;        int sum = add(1,2);   //调用方法        System.out.println(sum);&#125;//加法public static int add(int a,int b)&#123;    return a+b;&#125;//public表示外部类可以访问(修饰符)//static转化为类变量就可以被main方法调用(修饰符)//有返回值加void，并要有return；无返回值不加
+
+
+方法类似其它语言的函数
+
+return 0;可用来终止某个方法
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="Java流程控制">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java流程控制"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="Java流程控制">Java流程控制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-09T10:36:32.000Z" title="发表于 2020-11-09 18:36:32">2020-11-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">用户交互Scannernext()方法1234567891011121314151617181920package cool.ply.base;import java.util.Scanner;public class Demo02 &#123;    public static void main(String[] args) &#123;        //创建一个扫描器对象，用于接收键盘数据        Scanner scanner = new Scanner(System.in);        System.out.println(&quot;使用next方式接受：&quot;);        //判断用户有没有输入字符串        if (scanner.hasNext())&#123;   //if判断非必要            //使用next方式接收            String str = scanner.next();            System.out.println(&quot;输出的内容为：&quot;+str);        & ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Java%E5%9F%BA%E7%A1%80/" title="Java基础">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础"></a></div><div class="recent-post-info"><a class="article-title" href="/Java%E5%9F%BA%E7%A1%80/" title="Java基础">Java基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-05T11:12:36.000Z" title="发表于 2020-11-05 19:12:36">2020-11-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">准备工作
 JDK : Java开发者工具。
 JRE : Java运行环境。(JDK中包含JRE)
 JVM :  Java虚拟机。
@@ -95,26 +257,159 @@ long类型要在数字后面加个L
 例如：long num = 30L;
 
 float类型要在数字后面加个F
-例如：flaot num = 50.1F; ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/" title="HTML表单_02">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/html表单.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML表单_02"></a></div><div class="recent-post-info"><a class="article-title" href="/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/" title="HTML表单_02">HTML表单_02</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-10-30 20:32:47"><i class="fa fa-calendar" aria-hidden="true"></i>2020-10-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">多行文本域123&lt;form&gt;        备注信息：&lt;textarea name="remark" cols="30" rows="10"&gt;&lt;/textarea&gt;&lt;/form&gt;
+例如：flaot num = 50.1F;
+
+字符
+char只能输单个字符
 
 
-            效果如下：        备注信息：
-    ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-fw fa-chevron-right" aria-hidden="true"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Coder.Xie</div><div class="author-info__description">一个收藏回忆与记录学习的地方！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">17</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">14</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2" aria-hidden="true"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin1" aria-hidden="true"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2" aria-hidden="true"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content"><div>Java入门笔记已更新完毕！</div><br><div>为了更好的阅读体验，关闭樱花飘落特效~</div><br><img class="" src="https://cdn.jsdelivr.net/gh/lete114/CDN/Use/my_bg.gif"></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/Java%E5%BC%82%E5%B8%B8/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Java异常" alt="Java异常"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">Java异常</div><time class="aside-post_meta post-meta__date" title="发表于 2020-11-30 19:03:49">2020-11-30</time></div></a></div><div class="aside-recent-post"><a href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Java面向对象" alt="Java面向对象"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">Java面向对象</div><time class="aside-post_meta post-meta__date" title="发表于 2020-11-18 20:04:01">2020-11-18</time></div></a></div><div class="aside-recent-post"><a href="/Java%E6%95%B0%E7%BB%84/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Java数组" alt="Java数组"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">Java数组</div><time class="aside-post_meta post-meta__date" title="发表于 2020-11-16 18:14:36">2020-11-16</time></div></a></div><div class="aside-recent-post"><a href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/wyiyun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="网抑云人生" alt="网抑云人生"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">网抑云人生</div><time class="aside-post_meta post-meta__date" title="发表于 2020-11-15 12:38:10">2020-11-15</time></div></a></div><div class="aside-recent-post"><a href="/Java%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Java方法" alt="Java方法"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">Java方法</div><time class="aside-post_meta post-meta__date" title="发表于 2020-11-14 22:26:42">2020-11-14</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="card-category-list">
-            <li class="card-category-list-item"><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">实用程序</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">1</span></a></li>
-                       
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href='/tags/C/' style='font-size:17px; color:rgb(159, 67, 114)'>C++</a><a href='/tags/HTML/' style='font-size:16px; color:rgb(173, 86, 76)'>HTML</a><a href='/tags/Java/' style='font-size:17px; color:rgb(28, 22, 80)'>Java</a><a href='/tags/JavaScript/' style='font-size:16px; color:rgb(147, 73, 169)'>JavaScript</a><a href='/tags/VS-Code/' style='font-size:21px; color:rgb(62, 147, 112)'>VS Code</a><a href='/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/' style='font-size:16px; color:rgb(164, 117, 157)'>个人工具</a><a href='/tags/%E4%BA%BA%E7%94%9F/' style='font-size:18px; color:rgb(157, 87, 70)'>人生</a><a href='/tags/%E5%88%9D/' style='font-size:16px; color:rgb(194, 97, 69)'>初</a><a href='/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/' style='font-size:16px; color:rgb(94, 148, 180)'>学习笔记</a><a href='/tags/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/' style='font-size:21px; color:rgb(78, 17, 67)'>实用程序</a><a href='/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:17px; color:rgb(19, 187, 113)'>数据结构</a><a href='/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/' style='font-size:19px; color:rgb(89, 115, 105)'>王者荣耀</a><a href='/tags/%E7%BD%91%E6%8A%91%E4%BA%91/' style='font-size:16px; color:rgb(102, 128, 43)'>网抑云</a><a href='/tags/%E8%A1%A8%E5%8D%95/' style='font-size:18px; color:rgb(1, 86, 107)'>表单</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">17</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="5/1/2020 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Coder.Xie</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN/又拍云_logo.png"align="absmiddle" width="59px" height="30px" /></a><span>提供加速服务</span> <script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script> <script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="158986311361" m="1"></script></div><div class="icp"><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>鄂ICP备20010598号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="/js/third-party/ClickShowText.js"></script><script src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
-if (subtitleEffect) { 
-  var typed = new Typed("#subtitle", {
-    strings: '山有扶苏&#44;隰有荷华,永远不要放弃你的梦想&#44;奇迹每天都在发生.,Never give up your dreams. miracles happen everyday.'.split(","),
-    startDelay: 300,
-    typeSpeed: 150,
-    loop: false,
-    backSpeed: 50
-  })
+例如：char name = &#39;国&#39;; char name = &#39;A&#39;;
+
+字符串
+String不是关键字，是类
+
+
+例如：String name = &quot;蔡徐坤&quot;;
+
+
+浮点数拓展
+浮点数有限，离散，舍入误差，大约，接近但不等于
+最好完全避免使用浮点数进行比较
+
+
+常用BigDecimal（数学工具类）进行比较
+例如：银行业务表示。
+
+
+字符拓展
+所有的字符本质还是数字
+使用int强制转换可以使字符转换为对应Unicode编码表原数值。
+1234char c1 = &#x27;a&#x27;;System.out.println((int)c1);//打印结果为97(十进制)char c2 = &#x2 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/" title="HTML表单_02">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/html表单.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML表单_02"></a></div><div class="recent-post-info"><a class="article-title" href="/HTML%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E5%A4%8D%E4%B9%A0-02/" title="HTML表单_02">HTML表单_02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-30T12:32:47.000Z" title="发表于 2020-10-30 20:32:47">2020-10-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">多行文本域123&lt;form&gt;        备注信息：&lt;textarea name=&quot;remark&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;&lt;/form&gt;
+
+效果如下：
+
+        备注信息：
+
+
+
+
+
+    拖动右下角可以随意改变文本域大小，如果要取消这一特性，要使用CSS清除这一特性
+    textarea{
+    resize:none;
+    }
+    限制字符输入长度则需要使用JS脚本等方法
+
+
+readonly和disabled属性readonly属性
+在某些情况下，input表单控件并不用于用户输入数据，而是将已有的数据显示给用户查看，而且显示的这些数据，用户不能删除，也不能修改，即这些数据是只读的。
+
+1234&lt;form&gt;        &lt;input type=&quot;text&quot; name=&quot;input1&quot; value=&quot;中国&quot; readonly=&qu ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Coder.Xie</div><div class="author-info__description">一个收藏回忆与记录学习的地方！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Xiexinyue123"><i class="fab fa-github"></i><span>GayHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin1"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><div>本站已开启Pjax!</div><div><a href="https://player.lmih.cn/" target="_blank" rel="noopener external nofollow noreferrer"> 明月浩空</a>音乐播放器恢复正常使用！</div><div>Java入门笔记已更新完毕！</div><div>为了更好的阅读体验，关闭樱花飘落特效~</div><br><img class="" src="https://cdn.jsdelivr.net/gh/lete114/CDN/Use/my_bg.gif"></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java异常"/></a><div class="content"><a class="title" href="/Java%E5%BC%82%E5%B8%B8/" title="Java异常">Java异常</a><time datetime="2020-11-30T11:03:49.000Z" title="发表于 2020-11-30 19:03:49">2020-11-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面向对象"/></a><div class="content"><a class="title" href="/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="Java面向对象">Java面向对象</a><time datetime="2020-11-18T12:04:01.000Z" title="发表于 2020-11-18 20:04:01">2020-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Java%E6%95%B0%E7%BB%84/" title="Java数组"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java数组"/></a><div class="content"><a class="title" href="/Java%E6%95%B0%E7%BB%84/" title="Java数组">Java数组</a><time datetime="2020-11-16T10:14:36.000Z" title="发表于 2020-11-16 18:14:36">2020-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/wyiyun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网抑云人生"/></a><div class="content"><a class="title" href="/%E7%BD%91%E6%8A%91%E4%BA%91%E4%BA%BA%E7%94%9F/" title="网抑云人生">网抑云人生</a><time datetime="2020-11-15T04:38:10.000Z" title="发表于 2020-11-15 12:38:10">2020-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Java%E6%96%B9%E6%B3%95/" title="Java方法"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java方法"/></a><div class="content"><a class="title" href="/Java%E6%96%B9%E6%B3%95/" title="Java方法">Java方法</a><time datetime="2020-11-14T14:26:42.000Z" title="发表于 2020-11-14 22:26:42">2020-11-14</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">实用程序</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 1.1em; color: rgb(55, 64, 63)">C++</a><a href="/tags/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: rgb(94, 189, 94)">实用程序</a><a href="/tags/HTML/" style="font-size: 1.3em; color: rgb(155, 40, 125)">HTML</a><a href="/tags/%E8%A1%A8%E5%8D%95/" style="font-size: 1.3em; color: rgb(66, 182, 47)">表单</a><a href="/tags/JavaScript/" style="font-size: 1.3em; color: rgb(55, 74, 113)">JavaScript</a><a href="/tags/Java/" style="font-size: 1.5em; color: rgb(113, 88, 118)">Java</a><a href="/tags/VS-Code/" style="font-size: 1.1em; color: rgb(14, 180, 197)">VS Code</a><a href="/tags/%E5%88%9D/" style="font-size: 1.1em; color: rgb(143, 34, 133)">初</a><a href="/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: rgb(88, 86, 190)">个人工具</a><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: rgb(194, 192, 46)">学习笔记</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: rgb(133, 2, 57)">数据结构</a><a href="/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/" style="font-size: 1.1em; color: rgb(17, 8, 191)">王者荣耀</a><a href="/tags/%E7%BD%91%E6%8A%91%E4%BA%91/" style="font-size: 1.1em; color: rgb(5, 190, 90)">网抑云</a><a href="/tags/%E4%BA%BA%E7%94%9F/" style="font-size: 1.1em; color: rgb(138, 21, 62)">人生</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-04-30T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-12-02T15:05:17.353Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Coder.Xie</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN/又拍云_logo.png"align="absmiddle" width="59px" height="30px" /></a><span>提供加速服务</span> <script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script> <script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="158986311361" m="1"></script></div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png" alt="ICP"/><span>鄂ICP备20010598号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "山有扶苏&#44;隰有荷华,永远不要放弃你的梦想&#44;奇迹每天都在发生.,Never give up your dreams. miracles happen everyday.".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '山有扶苏&#44;隰有荷华'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
 } else {
-  document.getElementById("subtitle").innerHTML = '山有扶苏&#44;隰有荷华'
-}</script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/js/hideMobileSidebar.js"></script></body></html>
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
