@@ -228,14 +228,14 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/%E5%88%9D/</loc>
+    <loc>https://ply.cool/tags/VS-Code/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/VS-Code/</loc>
+    <loc>https://ply.cool/tags/%E5%88%9D/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
