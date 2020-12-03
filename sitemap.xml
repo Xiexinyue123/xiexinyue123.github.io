@@ -186,20 +186,6 @@
 
   
   <url>
-    <loc>https://ply.cool/tags/C/</loc>
-    <lastmod>2020-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ply.cool/tags/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2020-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ply.cool/tags/HTML/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -208,6 +194,20 @@
   
   <url>
     <loc>https://ply.cool/tags/%E8%A1%A8%E5%8D%95/</loc>
+    <lastmod>2020-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/tags/C/</loc>
+    <lastmod>2020-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/tags/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,14 +286,14 @@
 
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://ply.cool/categories/%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2020-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
