@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/article/1f4e9715.html</loc>
-    
-    <lastmod>2020-11-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ply.cool/article/7a37a823.html</loc>
     
     <lastmod>2020-11-14</lastmod>
@@ -228,13 +221,6 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/%E5%88%9D/</loc>
-    <lastmod>2020-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ply.cool/tags/VS-Code/</loc>
     <lastmod>2020-12-04</lastmod>
     <changefreq>daily</changefreq>
@@ -242,14 +228,14 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://ply.cool/tags/%E5%88%9D/</loc>
     <lastmod>2020-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/</loc>
+    <loc>https://ply.cool/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -270,14 +256,7 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/%E7%BD%91%E6%8A%91%E4%BA%91/</loc>
-    <lastmod>2020-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ply.cool/tags/%E4%BA%BA%E7%94%9F/</loc>
+    <loc>https://ply.cool/tags/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2020-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
