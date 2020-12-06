@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ply.cool/article/2bb77783.html</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ply.cool/article/f495a96f.html</loc>
     
     <lastmod>2020-11-30</lastmod>
@@ -279,7 +286,7 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/</loc>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -293,7 +300,7 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/</loc>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
