@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JavaScript数组 | 百般美好</title><meta name="keywords" content="JavaScript"><meta name="author" content="Coder.Xie"><meta name="copyright" content="Coder.Xie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="数组 数组也是一个对象 它和我们普通对象功能类似，也是用来存储一些值的 不同的是： 普通对象是使用字符串作为属性名的 数组是使用数字来作为索引操作元素   索引（index） 从0开始的整数就是索引   数组的存储性能比普通对象要高，在开发中我们经常使用数组来存储一些数据  12345678910111213141516171819202122232425262728&#x2F;&#x2F;创建一个数组对象var a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript数组">
+<meta property="og:url" content="https://ply.cool/article/bd63f59d.html">
+<meta property="og:site_name" content="百般美好">
+<meta property="og:description" content="数组 数组也是一个对象 它和我们普通对象功能类似，也是用来存储一些值的 不同的是： 普通对象是使用字符串作为属性名的 数组是使用数字来作为索引操作元素   索引（index） 从0开始的整数就是索引   数组的存储性能比普通对象要高，在开发中我们经常使用数组来存储一些数据  12345678910111213141516171819202122232425262728&#x2F;&#x2F;创建一个数组对象var a">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg">
+<meta property="article:published_time" content="2020-12-08T12:14:53.000Z">
+<meta property="article:modified_time" content="2020-12-08T12:14:53.000Z">
+<meta property="article:author" content="Coder.Xie">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><link rel="canonical" href="https://ply.cool/article/bd63f59d"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: {"text":"啾咪,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-08 20:14:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO/butterfly/css/pool.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/footer.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/iconfont.min.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="百般美好" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">百般美好</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">JavaScript数组</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-08T12:14:53.000Z" title="发表于 2020-12-08 20:14:53">2020-12-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-08T12:14:53.000Z" title="更新于 2020-12-08 20:14:53">2020-12-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/">JavaScript</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/article/bd63f59d.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/article/bd63f59d.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
+<li>数组也是一个对象</li>
+<li>它和我们普通对象功能类似，也是用来存储一些值的</li>
+<li>不同的是：<ul>
+<li>普通对象是使用字符串作为属性名的</li>
+<li>数组是使用数字来作为索引操作元素</li>
+</ul>
+</li>
+<li>索引（index）<ul>
+<li>从0开始的整数就是索引</li>
+</ul>
+</li>
+<li>数组的存储性能比普通对象要高，在开发中我们经常使用数组来存储一些数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个数组对象</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用typeof检查一个数组时，会返回object</span></span><br><span class="line"><span class="comment">//console.log(typeof arr);</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">33</span>;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">22</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取数组中的元素</span></span><br><span class="line"><span class="comment">// 语法：数组[索引]</span></span><br><span class="line"><span class="comment">// 如果读取不存在的索引，它不会报错，而是返回undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">3</span>]);<span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取数组长度</span></span><br><span class="line"><span class="comment">// 对于连续的数组，使用length可以获取到数组的长度（数的个数）</span></span><br><span class="line"><span class="comment">// 对于非连续的数组，使用length会获取到数组的最大索引+1</span></span><br><span class="line"><span class="comment">//          尽量不要创建非连续数组</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.length);</span><br><span class="line"></span><br><span class="line"><span class="comment">//修改length</span></span><br><span class="line"><span class="comment">//如果修改的length大于原长度，则多出来的部分会空出来</span></span><br><span class="line"><span class="comment">//如果修改的length小于原长度，则多出来的元素会被删除</span></span><br><span class="line">arr.length = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//向数组的最后一个位置添加元素</span></span><br><span class="line">arr[arr.length] = <span class="number">70</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="数组字面量"><a href="#数组字面量" class="headerlink" title="数组字面量"></a>数组字面量</h1><ul>
+<li><p>创建一个数组：<code>var arr = new Array();</code> </p>
+</li>
+<li><p>使用字面量来创建数组：<code>var arr = [];</code> </p>
+</li>
+<li><p>使用字面量创建数组时，可以在创建时就指定数组中的元素</p>
+<p><code>var arr = [1，2，3，4，5，10];</code> </p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组，数组中只有一个元素10</span></span><br><span class="line">arr = [<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个长度为10的数组</span></span><br><span class="line">arr2 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>数组中的元素可以是任意数据类型</p>
+<p><code>var arr = [&quot;hello&quot;,1,true,null,undefined];</code></p>
+</li>
+<li><p>也可以是对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj =&#123;<span class="attr">name</span>:<span class="string">&quot;孙悟空&quot;</span>&#125;;</span><br><span class="line">arr[arr.length] = obj;</span><br><span class="line"></span><br><span class="line">arr2 = [&#123;<span class="attr">name</span>:<span class="string">&quot;孙悟空&quot;</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">&quot;猪八戒&quot;</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">&quot;沙和尚&quot;</span>&#125;]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr2[<span class="number">1</span>].name);<span class="comment">// 猪八戒</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可以是一个函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="number">1</span>)&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="number">2</span>)&#125;];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>]();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可以是一个数组，这种数组称为二维数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20201208210553411.png" alt="image-20201208210553411"></p>
+</li>
+</ul>
+<h1 id="数组的四个方法"><a href="#数组的四个方法" class="headerlink" title="数组的四个方法"></a>数组的四个方法</h1><h2 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h2><ul>
+<li><p>该方法可以向数组的末尾添加一个或多个元素，并返回数组新的长度</p>
+</li>
+<li><p>可以将要添加的元素作为方法的参数传递</p>
+<p>这样这些元素将会自动添加到数组的末尾</p>
+</li>
+<li><p>该方法会将数组新的长度作为返回值返回</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;孙悟空&quot;</span>,<span class="string">&quot;猪八戒&quot;</span>,<span class="string">&quot;沙和尚&quot;</span>];</span><br><span class="line">arr.push(<span class="string">&quot;唐僧&quot;</span>,<span class="string">&quot;蜘蛛精&quot;</span>,<span class="string">&quot;白骨精&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20201208211836183.png" alt="image-20201208211836183"></p>
+<h2 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h2><ul>
+<li>该方法可以删除数组的最后一个元素，并将被删除的元素作为返回值返回</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;孙悟空&quot;</span>,<span class="string">&quot;猪八戒&quot;</span>,<span class="string">&quot;沙和尚&quot;</span>];</span><br><span class="line">arr.push(<span class="string">&quot;唐僧&quot;</span>,<span class="string">&quot;蜘蛛精&quot;</span>,<span class="string">&quot;白骨精&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line">arr.pop();</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="keyword">var</span> result = arr.pop();</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;result = &quot;</span>+result);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20201208212615516.png" alt="image-20201208212615516"></p>
+<h2 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h2><ul>
+<li>向数组开头添加一个或多个元素，并返回新的数组长度</li>
+<li>向前面插入元素以后，其它元素索引会依次调整</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;孙悟空&quot;</span>,<span class="string">&quot;猪八戒&quot;</span>,<span class="string">&quot;沙和尚&quot;</span>];</span><br><span class="line">arr.push(<span class="string">&quot;唐僧&quot;</span>,<span class="string">&quot;蜘蛛精&quot;</span>,<span class="string">&quot;白骨精&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line">arr.unshift(<span class="string">&quot;牛魔王&quot;</span>,<span class="string">&quot;二郎神&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20201208213540909.png" alt="image-20201208213540909"></p>
+<h2 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h2><ul>
+<li>删除数组的第一个元素，并将删除的元素作为返回值返回</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;孙悟空&quot;</span>,<span class="string">&quot;猪八戒&quot;</span>,<span class="string">&quot;沙和尚&quot;</span>];</span><br><span class="line">arr.push(<span class="string">&quot;唐僧&quot;</span>,<span class="string">&quot;蜘蛛精&quot;</span>,<span class="string">&quot;白骨精&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="keyword">var</span> result = arr.shift();</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;result = &quot;</span>+result);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20201208214311158.png" alt="image-20201208214311158"></p>
+<h1 id="持续更新中。。。"><a href="#持续更新中。。。" class="headerlink" title="持续更新中。。。"></a>持续更新中。。。</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Coder.Xie</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ply.cool/article/bd63f59d.html">https://ply.cool/article/bd63f59d.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ply.cool" target="_blank">百般美好</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/article/2bb77783.html"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JavaScript对象与函数_02</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/article/2bb77783.html" title="JavaScript对象与函数_02"><img class="cover" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-06</div><div class="title">JavaScript对象与函数_02</div></div></a></div><div><a href="/article/9b9ababb.html" title="JavaScript对象与函数_01"><img class="cover" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-25</div><div class="title">JavaScript对象与函数_01</div></div></a></div><div><a href="/article/a9ba4134.html" title="JavaScript基本数据类型"><img class="cover" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-21</div><div class="title">JavaScript基本数据类型</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Coder.Xie</div><div class="author-info__description">一个收藏回忆与记录学习的地方！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Xiexinyue123"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><div>Java入门笔记已更新完毕！</div><div>JavaScript笔记已恢复更新</div><div>为了更好的阅读体验，关闭樱花飘落特效~</div><br><img class="" src="https://cdn.jsdelivr.net/gh/lete114/CDN/Use/my_bg.gif"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">1.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">数组字面量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">数组的四个方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#push"><span class="toc-number">3.1.</span> <span class="toc-text">push()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pop"><span class="toc-number">3.2.</span> <span class="toc-text">pop()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unshift"><span class="toc-number">3.3.</span> <span class="toc-text">unshift()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shift"><span class="toc-number">3.4.</span> <span class="toc-text">shift()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD%E3%80%82%E3%80%82%E3%80%82"><span class="toc-number">4.</span> <span class="toc-text">持续更新中。。。</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/bd63f59d.html" title="JavaScript数组"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript数组"/></a><div class="content"><a class="title" href="/article/bd63f59d.html" title="JavaScript数组">JavaScript数组</a><time datetime="2020-12-08T12:14:53.000Z" title="发表于 2020-12-08 20:14:53">2020-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/2bb77783.html" title="JavaScript对象与函数_02"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript对象与函数_02"/></a><div class="content"><a class="title" href="/article/2bb77783.html" title="JavaScript对象与函数_02">JavaScript对象与函数_02</a><time datetime="2020-12-06T11:38:49.000Z" title="发表于 2020-12-06 19:38:49">2020-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/f495a96f.html" title="Java异常"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java异常"/></a><div class="content"><a class="title" href="/article/f495a96f.html" title="Java异常">Java异常</a><time datetime="2020-11-30T11:03:49.000Z" title="发表于 2020-11-30 19:03:49">2020-11-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/5f8d3e42.html" title="Java面向对象"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面向对象"/></a><div class="content"><a class="title" href="/article/5f8d3e42.html" title="Java面向对象">Java面向对象</a><time datetime="2020-11-18T12:04:01.000Z" title="发表于 2020-11-18 20:04:01">2020-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/e3345db4.html" title="Java数组"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java数组"/></a><div class="content"><a class="title" href="/article/e3345db4.html" title="Java数组">Java数组</a><time datetime="2020-11-16T10:14:36.000Z" title="发表于 2020-11-16 18:14:36">2020-11-16</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Coder.Xie</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img style="position:relative;top:-2px; " src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN/又拍云_logo.png"align="absmiddle" width="59px" height="30px" /></a><span>提供加速服务</span></div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png" alt="ICP"/><span>鄂ICP备20010598号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const friends = 'https://www.isk.ink,https://www.isk.ink/,https://plushine.cn,https://plushine.cn/,https://www.meilinfeng.top,https://www.meilinfeng.top/,https://euukey.com,https://euukey.com/,https://www.lete114.top,https://www.lete114.top/,https://blog.ninglans.top,https://blog.ninglans.top/,https://snow.js.org,https://snow.js.org/,https://kali.js.org,https://kali.js.org/,https://lyuan.co,https://lyuan.co/,https://blog.zhheo.com,https://blog.zhheo.com/,http://byelmx.com,http://byelmx.com/,https://www.ply.cool,https://www.ply.cool/,https://plycool.gitee.io/birthday/,https://plycool.gitee.io/birthday'.split(',');  //将获取的友链地址存入变量friends中
+    let initData = {
+      el: '#vcomment',
+      appId: 'SD5GEXmh0G0B2d580ugPOGgV-MdYXbMMI',
+      appKey: '9qqyOvaiiqQXA9di0UCTGuiJ',
+      placeholder: '昵称栏中输入您的QQ账号然后按Tab键可自动获取您的QQ昵称，并自动将邮箱栏填写为您的QQ邮箱，评论后请注意稍后在您的QQ邮箱中将收到我的回复！！！ヾﾉ≧∀≦)o来啊，快活啊!',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://SD5GEXmh.api.lncldglobal.com',
+      emojiCDN: '',
+      emojiMaps: {"傲娇":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409103906.webp",
+      "开心":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409104757.webp",
+      "拍手手":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130304.webp",
+      "得瑟":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130258.webp",
+      "来了来了":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/19.webp",
+      "挠挠头":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/30.gif",
+      "惊呆了":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/29.webp",
+      "捉":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/24.webp",
+      "仙女下凡":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/12.webp",
+      "揪脸脸":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/10.webp",
+      "吃瓜":"https://pic3.zhimg.com/v2-0862a36e96dcd4b0eb8aaa6a724434ca_b.gif",
+      "自闭了":"https://pic1.zhimg.com/v2-31e18866441a228f7aaf5b63775feb34_b.gif",
+      "目瞪狗呆":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/16.webp",
+      "干了":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/21.webp",
+      "躲被几":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/1.webp",
+      "拽被几":"https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/2.webp",
+      "点赞":"https://pic1.zhimg.com/v2-35eeb1d14b56b7b43aac45055f75eaa8_b.gif",
+      "bili_tv_gif_抓狂" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/抓狂.gif",
+      "bili_tv_gif_再见" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/再见.gif",
+      "bili_tv_gif_晕" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/晕.gif",
+      "bili_tv_gif_疑问" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/疑问.gif",
+      "bili_tv_gif_斜眼笑" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/斜眼笑.gif",
+      "bili_tv_gif_笑哭" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/笑哭.gif",
+      "bili_tv_gif_无奈" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/无奈.gif",
+      "bili_tv_gif_委屈" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/委屈.gif",
+      "bili_tv_gif_微笑" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/微笑.gif",
+      "bili_tv_gif_吐血" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/吐血.gif",
+      "bili_tv_gif_偷笑" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/偷笑.gif",
+      "bili_tv_gif_思考" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/思考.gif",
+      "bili_tv_gif_睡着" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/睡着.gif",
+      "bili_tv_gif_生气" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/生气.gif",
+      "bili_tv_gif_生病" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/生病.gif",
+      "bili_tv_gif_色" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/色.gif",
+      "bili_tv_gif_亲亲" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/亲亲.gif",
+      "bili_tv_gif_呕吐" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/呕吐.gif",
+      "bili_tv_gif_难过" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/难过.gif",
+      "bili_tv_gif_腼腆" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/腼腆.gif",
+      "bili_tv_gif_流汗" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/流汗.gif",
+      "bili_tv_gif_流鼻血" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/流鼻血.gif",
+      "bili_tv_gif_困" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/困.gif",
+      "bili_tv_gif_抠鼻子" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/抠鼻子.gif",
+      "bili_tv_gif_可爱" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/可爱.gif",
+      "bili_tv_gif_惊吓" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/惊吓.gif",
+      "bili_tv_gif_坏笑" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/坏笑.gif",
+      "bili_tv_gif_黑人问号" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/黑人问号.gif",
+      "bili_tv_gif_害羞" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/害羞.gif",
+      "bili_tv_gif_鼓掌" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/鼓掌.gif",
+      "bili_tv_gif_尴尬" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/尴尬.gif",
+      "bili_tv_gif_发怒" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/发怒.gif",
+      "bili_tv_gif_发财" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/发财.gif",
+      "bili_tv_gif_调皮" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/调皮.gif",
+      "bili_tv_gif_点赞" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/点赞.gif",
+      "bili_tv_gif_呆" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/呆.gif",
+      "bili_tv_gif_大佬" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/大佬.gif",
+      "bili_tv_gif_大哭" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/大哭.gif",
+      "bili_tv_gif_打脸" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/打脸.gif",
+      "bili_tv_gif_馋" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/馋.gif",
+      "bili_tv_gif_闭嘴" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/闭嘴.gif",
+      "bili_tv_gif_鄙视" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/鄙视.gif",
+      "bili_tv_gif_白眼" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/白眼.gif",
+      "bili_tv_gif_doge" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bili_tv_gif/doge.gif",
+      "猥琐萌_1" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/292.jpg",
+      "猥琐萌_2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/288.jpg",
+      "猥琐萌_3" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/301.jpg",
+      "猥琐萌_4" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/319.jpg",
+      "猥琐萌_5" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/324.jpg",
+      "猥琐萌_6" : "https://pic2.zhimg.com/v2-42c967fae56d7b3c86bec6cde9bcd7b1_b.gif",
+      "猥琐萌_7" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/304.jpg",
+      "猥琐萌_8" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/296.gif",
+      "猥琐萌_9" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/287.gif",
+      "猥琐萌_10" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/260.jpg",
+      "猥琐萌_11" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/猥琐萌/262.jpg",
+      "猥琐萌_12" : "https://pic3.zhimg.com/v2-1ced686ce3147ae0dcf3b4c44af64b66_b.gif",
+      "猥琐萌_13" : "https://pic4.zhimg.com/v2-9a7df92798c0e20752aa74e4cc5466cb_b.gif"},
+      enableQQ: true,
+      path: window.location.pathname,
+      master: 'https://ply.cool',  //主题根目录配置文件获取博主地址
+      friends: friends,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('/js/valine.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="5362271346" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
