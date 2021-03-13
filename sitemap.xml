@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/gallery/image/index.html</loc>
+    <loc>https://ply.cool/gallery/recollect/index.html</loc>
     
     <lastmod>2020-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ply.cool/gallery/recollect/index.html</loc>
+    <loc>https://ply.cool/gallery/image/index.html</loc>
     
     <lastmod>2020-06-21</lastmod>
     
@@ -214,13 +214,6 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/tags/JavaScript/</loc>
-    <lastmod>2021-03-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ply.cool/tags/HTML/</loc>
     <lastmod>2021-03-13</lastmod>
     <changefreq>daily</changefreq>
@@ -229,6 +222,13 @@
   
   <url>
     <loc>https://ply.cool/tags/%E8%A1%A8%E5%8D%95/</loc>
+    <lastmod>2021-03-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/tags/JavaScript/</loc>
     <lastmod>2021-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,14 +321,14 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/</loc>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/</loc>
     <lastmod>2021-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/</loc>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/</loc>
     <lastmod>2021-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
