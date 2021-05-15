@@ -6,7 +6,7 @@
   <link href="https://ply.cool/atom.xml" rel="self"/>
   
   <link href="https://ply.cool/"/>
-  <updated>2021-05-08T12:57:43.000Z</updated>
+  <updated>2021-05-15T11:41:43.000Z</updated>
   <id>https://ply.cool/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript CSS相关操作</title>
+    <link href="https://ply.cool/article/6fe37bd8.html"/>
+    <id>https://ply.cool/article/6fe37bd8.html</id>
+    <published>2021-05-15T11:41:43.000Z</published>
+    <updated>2021-05-15T11:41:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="通过JS读取修改元素的样式"><a href="#通过JS读取修改元素的样式" class="headerlink" title="通过JS读取修改元素的样式"></a>通过JS读取修改元素的样式</h1><ul><li><p>读取：<code>元素.style.样式名</code> </p></li><li><p>修改：<code>元素.style.样式名 = 样式值</code> </p></li><li><p>注意：</p><p>如果CSS的样式名中含有<code>-</code>，这种名称在JS中是不合法的</p><p>比如<code>background-color</code> </p><p>需要将这种样式修改为驼峰命名法：去掉<code>-</code>，将<code>-</code>后的字母大写</p></li><li><p>我们通过<code>style</code>属性设置的样式都是内联样式</p><p>内联样式有较高的优先级，所以通过JS修改的样式往往会立即显示</p></li><li><p>但是如果在样式中写了<code>!important</code>，则此时样式会有最高的优先级</p><p>即使通过JS也不能覆盖该样式，此时将导致JS修改样式失效</p><p>所以尽量不要为样式添加<code>!important</code> </p></li><li><p>通过<code>style</code>属性设置和读取的都是内联样式</p><p>无法读取样式表中的样式</p></li></ul><h1 id="读取元素的当前显示样式"><a href="#读取元素的当前显示样式" class="headerlink" title="读取元素的当前显示样式"></a>读取元素的当前显示样式</h1><ul><li><p><del><code>元素.currentStyle.样式名</code></del></p><p>只有IE支持！！！</p></li><li><p><code>getComputedStyle()</code>这个方法可以获取当前样式，</p><p>这个方法是window的方法，可以直接使用</p><p>需要两个元素：</p><ul><li>第一个：要获取样式的元素</li><li>第二个：可以传递一个伪元素，一般都传<code>null</code> </li></ul><p>该方法会返回一个对象，对象中封装了当前元素对应的样式</p><p>可以通过<code>对象.样式名</code>来读取样式</p><p>如果获取的样式没有设置，则会获取到真实的值，而不是默认值</p><ul><li>比如：没有设置<code>width</code>，它不会获取到<code>auto</code>，而是一个长度</li><li><code>getComputedStyle(box1,null).width</code> </li></ul></li><li><p>通过<code>currentStyle</code>和<code>getComputedStyle()</code>读取到的样式都是只读的</p><p>要更改样式，只能通过style属性</p></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #box1&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 200px;</span><br><span class="line">            background-color: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> box1 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;box1&quot;</span>);</span><br><span class="line">            <span class="keyword">var</span> btn01 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;btn01&quot;</span>);</span><br><span class="line">            btn01.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                box1.style.width = <span class="string">&quot;300px&quot;</span>;</span><br><span class="line">                box1.style.height = <span class="string">&quot;300px&quot;</span>;</span><br><span class="line">                box1.style.backgroundColor = <span class="string">&quot;yellow&quot;</span>;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="comment">//点击btn02，读取元素的样式</span></span><br><span class="line">            <span class="keyword">var</span> btn02 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;btn02&quot;</span>);</span><br><span class="line">            btn02.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                alert(getComputedStyle(box1,<span class="literal">null</span>).backgroundColor);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button id=<span class="string">&quot;btn01&quot;</span>&gt;点我一下&lt;/button&gt;</span><br><span class="line">    &lt;button id=<span class="string">&quot;btn02&quot;</span>&gt;点我一下<span class="number">2</span>&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;&lt;br&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;box1&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;通过JS读取修改元素的样式&quot;&gt;&lt;a href=&quot;#通过JS读取修改元素的样式&quot; class=&quot;headerlink&quot; title=&quot;通过JS读取修改元素的样式&quot;&gt;&lt;/a&gt;通过JS读取修改元素的样式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;读取：&lt;code&gt;元素.style</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaScript" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript DOM</title>
@@ -536,35 +563,6 @@
     
     
     <category term="个人工具" scheme="https://ply.cool/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构</title>
-    <link href="https://ply.cool/article/79666db.html"/>
-    <id>https://ply.cool/article/79666db.html</id>
-    <published>2020-05-27T12:38:04.000Z</published>
-    <updated>2020-05-27T12:38:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章  绪论"></a>第一章  绪论</h1><p>数据的定义：信息的载体。</p><p>数据元素、数据项：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体进行考虑和处理。一个数据元素可由若干<strong>数据项</strong>组成，数据项是构成数据元素的不可分割的最小单位。</p><p>数据结构的定义：相互之间存在一种或多种特定<strong>关系</strong>的数据元素的集合。</p><p>数据对象：具有<strong>相同性质</strong>的数据元素的集合，是数据的一个子集。</p><h2 id="数据结构的三要素"><a href="#数据结构的三要素" class="headerlink" title="数据结构的三要素"></a>数据结构的三要素</h2><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><ol><li>集合&lt;不讨论&gt;</li><li>线性结构&lt;第二，三章&gt;</li><li>树形结构&lt;第四章&gt;</li><li>图状结构（网状结构）&lt;第五章&gt;</li></ol><h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><ol><li>顺序存储</li><li>链式存储</li><li>索引存储</li><li>散列存储&lt;第六章（散列表有讲）&gt;</li></ol><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/d7.png"></p><h3 id="数据的运算"><a href="#数据的运算" class="headerlink" title="数据的运算"></a>数据的运算</h3><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/d8.png"></p><h2 id="数据类型、抽象数据类型"><a href="#数据类型、抽象数据类型" class="headerlink" title="数据类型、抽象数据类型"></a>数据类型、抽象数据类型</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>定义：一个值的集合和定义在此集合上的一组操作的总称。</p><ol><li><p>原子类型（其值不可再分的数据类型）</p><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/d9.png"></p></li><li><p>结构类型（其值可以再分解为若干成分&lt;分量&gt;的数据类型）</p><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/d10.png"></p></li></ol><h3 id="抽象数据类型（ADT）"><a href="#抽象数据类型（ADT）" class="headerlink" title="抽象数据类型（ADT）"></a>抽象数据类型（ADT）</h3><p>定义：抽象数据组织及与之相关的操作。</p><h2 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h2><p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/d12.png"></p><p><strong>算法的五大特性</strong></p><ol><li><p><strong>有穷性</strong>：一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。</p><p>注：<strong>算法</strong>必须是<strong>有穷</strong>的，而<strong>程序</strong>可以是<strong>无穷</strong>的。</p></li><li><p><strong>确定性</strong>：算法中每条指令必须有确切的含义，对于<strong>相同的输入</strong>只能得出<strong>相同的结果</strong>。</p></li><li><p><strong>可行性</strong>：算法中描述的操作都可以通过已经实现的<strong>基本运算执行有限次</strong>来实现。</p></li><li><p><strong>输入</strong>：一个算法<strong>有零个或多个输入</strong>，这些输入取自于某个特定的对象的集合。</p></li><li><p><strong>输出</strong>：一个算法<strong>有一个或多个输出</strong>，这些输出是与输入有着某种特定关系的量。</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;第一章-绪论&quot;&gt;&lt;a href=&quot;#第一章-绪论&quot; class=&quot;headerlink&quot; title=&quot;第一章  绪论&quot;&gt;&lt;/a&gt;第一章  绪论&lt;/h1&gt;&lt;p&gt;数据的定义：信息的载体。&lt;/p&gt;
-&lt;p&gt;数据元素、数据项：&lt;strong&gt;数据元素&lt;/strong&gt;是数</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="数据结构" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-    <category term="学习笔记" scheme="https://ply.cool/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="数据结构" scheme="https://ply.cool/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
