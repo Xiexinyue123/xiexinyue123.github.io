@@ -6,7 +6,7 @@
   <link href="https://ply.cool/atom.xml" rel="self"/>
   
   <link href="https://ply.cool/"/>
-  <updated>2021-05-16T14:59:31.000Z</updated>
+  <updated>2021-05-19T10:10:47.000Z</updated>
   <id>https://ply.cool/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript BOM与JSON</title>
+    <link href="https://ply.cool/article/17c0953f.html"/>
+    <id>https://ply.cool/article/17c0953f.html</id>
+    <published>2021-05-19T10:10:47.000Z</published>
+    <updated>2021-05-19T10:10:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是BOM"><a href="#什么是BOM" class="headerlink" title="什么是BOM"></a>什么是BOM</h1><ul><li><p>浏览器对象模型</p></li><li><p>BOM可以使我们通过JS来操作浏览器</p></li><li><p>在BOM中为我们提供了一组对象，用来完成对浏览器的操作</p></li><li><p>BOM对象</p><ul><li><p>Window</p><ul><li>代表的是整个浏览器的窗口，同时window也是网页中的全局对象</li></ul></li><li><p>Navigator</p><ul><li>代表的是当前浏览器的信息，通过该对象可以识别不同的浏览器</li></ul></li><li><p>Location</p><ul><li>代表浏览器的地址栏信息，通过Location可以获取地址栏信息，或者操作浏览器跳转页面</li></ul></li><li><p>History</p><ul><li><p>代表浏览器的历史记录，可以通过该对象操作浏览器的历史记录</p><p>由于隐私的原因，该对象不能获取到具体的历史记录，只能操作浏览器向前或向后翻页，而且该操作只在当次访问时有效</p></li></ul></li><li><p>Screen</p><ul><li>代表用户的屏幕的相关信息，通过该对象可以获取到用户显示器的相关信息</li></ul></li></ul></li><li><p>Navigator，Location，History，Screen都是作为window对象的属性保存的</p><p>可以通过window对象来使用，也可以直接使用</p></li></ul><h1 id="Navigator"><a href="#Navigator" class="headerlink" title="Navigator"></a>Navigator</h1><ul><li>由于历史原因，Navigator对象的大部分属性都已经不能帮助我们识别浏览器了</li><li>一般我们只会使用<code>userAgent</code>来判断浏览器的信息<ul><li>userAgent是一个字符串，这个字符串中包含了用来描述浏览器信息的内容</li><li>不同的浏览器会有不同的userAgent</li></ul></li></ul><h1 id="History"><a href="#History" class="headerlink" title="History"></a>History</h1><ul><li><p>可以操作浏览器向前或向后翻页</p></li><li><p>length</p><ul><li>属性，可以获取到当次访问链接的数量</li></ul></li><li><p>back()</p><ul><li>方法，可以回退到上一个页面，作用和浏览器的回退按钮一样</li></ul></li><li><p>forward()</p><ul><li>方法，可以跳转到下一个页面，作用和浏览器的前进按钮一样</li></ul></li><li><p>go()</p><ul><li><p>可以跳转到指定页面</p></li><li><p>它需要一个整数作为参数</p><p>1：表示向前跳转一个页面 相当于<code>farward()</code> </p><p>2：表示向前跳转两个页面</p><p>-1：表示向后跳转一个页面 相当于<code>back()</code> </p><p>-2：表示向后跳转两个页面</p></li></ul></li></ul><h1 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h1><ul><li><p>如果直接打印<code>location</code>，则可以获取到当前页面的完整路径</p></li><li><p>如果直接将<code>location</code>属性修改为一个完整的路径，或相对路径</p><p>则页面会自动跳转到该路径</p><p>并且会生成相应的历史记录</p></li><li><p>assgin()</p><ul><li>用来跳转到其他的页面，作用和直接修改<code>location</code>一样</li></ul></li><li><p>reload()</p><ul><li>用于重新加载当前页面，作用和刷新一样</li><li>如果在方法中，传递一个<code>true</code>作为参数，则会强制清空缓存刷新页面</li></ul></li><li><p>replace()</p><ul><li><p>可以使用一个新的页面替换当前页面，调用完毕也会跳转页面</p><p>不会生成历史记录，不能使用回退按钮回退</p></li></ul></li></ul><h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><ul><li>JS的程序执行速度是非常非常快的</li><li>如果希望一段程序可以每间隔一段时间调用一次，可以使用定时调用</li></ul><h2 id="定时调用"><a href="#定时调用" class="headerlink" title="定时调用"></a>定时调用</h2><h3 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h3><ul><li>定时调用</li><li>可以将一个函数每隔一段时间执行一次</li><li>参数：<ol><li>回调函数，该函数每隔一段时间被调用一次</li><li>每次调用间隔的时间，单位是毫秒</li></ol></li><li>返回值：<ul><li>返回一个Number类型的数据</li><li>这个数字作为定时器的唯一标识</li></ul></li></ul><h3 id="clearInterval"><a href="#clearInterval" class="headerlink" title="clearInterval()"></a>clearInterval()</h3><ul><li><p>可以用来关闭一个定时器</p></li><li><p>方法中需要一个定时器的标识作为参数，这样将关闭定时器对应的定时器</p></li><li><p>可以接收任意参数</p><p>如果参数是一个有效的定时器标识，则停止对应的定时器</p><p>如果参数不是一个有效的标识，则什么也不做</p></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> count = <span class="built_in">document</span>.getElementById(<span class="string">&quot;count&quot;</span>);</span><br><span class="line">            <span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">var</span> timer = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                count.innerHTML = num++;</span><br><span class="line">                <span class="keyword">if</span>(num == <span class="number">11</span>)&#123;</span><br><span class="line">                    <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,<span class="number">500</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1 id=<span class="string">&quot;count&quot;</span>&gt;&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>上述程序将在页面中输出1到10，每隔半秒输出一次</p><h2 id="延时调用"><a href="#延时调用" class="headerlink" title="延时调用"></a>延时调用</h2><ul><li>延时调用一个函数不马上执行，而是隔一段时间以后再执行，而且只会执行一次</li></ul><blockquote><p>延时调用和定时调用的区别：</p><p>定时调用会执行多次，而延时调用只会执行一次</p></blockquote><ul><li>延时调用与定时调用语法几乎相同，在实际开发中是可以互相代替的</li></ul><h3 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h3><h3 id="clearTimeout"><a href="#clearTimeout" class="headerlink" title="clearTimeout()"></a>clearTimeout()</h3><h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><ul><li><p>JSON:    JS对象表示法</p></li><li><p>JS中的对象只有JS认识，别的语言都不认识</p></li><li><p>JSON就是一个特殊格式的字符串，这个字符串可以被任何语言所识别</p><p>并且可以转换为任意语言中的对象</p></li><li><p>JSON在开发中主要用来数据的交互</p></li><li><p>JSON和JS对象的格式一样，只不过JSON字符串的属性名必须加双引号</p><p>其它和JS语法一致</p></li></ul><h2 id="JSON分类"><a href="#JSON分类" class="headerlink" title="JSON分类"></a>JSON分类</h2><ul><li>对象<code>&#123;&#125;</code> <ul><li><code>var obj = &#39;&#123;&quot;name&quot;:&quot;孙悟空&quot;,&quot;age&quot;:18,&quot;gender&quot;:&quot;男&quot;&#125;&#39;;</code> </li></ul></li><li>数组<code>[]</code> <ul><li><code>var arr = &#39;[1,2,3,&quot;hello&quot;,true]&#39;;</code> </li></ul></li></ul><h2 id="JSON中允许的值"><a href="#JSON中允许的值" class="headerlink" title="JSON中允许的值"></a>JSON中允许的值</h2><ul><li>字符串</li><li>数组</li><li>布尔值</li><li>null</li><li>对象（不包括函数）</li><li>数组</li></ul><h2 id="将JSON字符串转换为JS中的对象"><a href="#将JSON字符串转换为JS中的对象" class="headerlink" title="将JSON字符串转换为JS中的对象"></a>将JSON字符串转换为JS中的对象</h2><ul><li><p>在JS中，为我们提供了一个工具类，就叫JSON</p><p>这个对象可以帮助我们将一个JSON转换为JS对象，也可以将一个JS对象转换为JSON</p></li></ul><h3 id="JSON-–-gt-JS对象"><a href="#JSON-–-gt-JS对象" class="headerlink" title="JSON –&gt; JS对象"></a>JSON –&gt; JS对象</h3><ul><li><p><code>JSON.parse()</code> </p><ul><li>可以将JSON字符串转换为JS对象</li><li>它需要一个JSON字符串作为参数，会将字符串转换为JS对象并返回</li></ul><p><code>var o = JSON.parse(obj);</code> </p><p><code>var o2 = JSON.parse(arr);</code> </p></li></ul><h3 id="JS对象-–-gt-JSON"><a href="#JS对象-–-gt-JSON" class="headerlink" title="JS对象 –&gt; JSON"></a>JS对象 –&gt; JSON</h3><ul><li><code>JSON.stringify()</code> <ul><li>可以将一个JS对象转换为JSON字符串</li><li>它需要一个JS对象作为参数，会将JS对象转换为JSON字符串并返回</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;什么是BOM&quot;&gt;&lt;a href=&quot;#什么是BOM&quot; class=&quot;headerlink&quot; title=&quot;什么是BOM&quot;&gt;&lt;/a&gt;什么是BOM&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;浏览器对象模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;BOM可以使我们通过JS来操作浏览器&lt;/</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaScript" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript 事件</title>
@@ -547,29 +576,6 @@
     
     
     <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王者荣耀战区修改教程</title>
-    <link href="https://ply.cool/article/22585c50.html"/>
-    <id>https://ply.cool/article/22585c50.html</id>
-    <published>2020-07-20T05:02:57.000Z</published>
-    <updated>2020-07-20T05:02:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul><li><p>王者荣耀作为一款近年来十分火爆的游戏，深受各年龄段人群的喜爱。很多玩家更是期望能够提高自己主玩英雄的荣耀战力排名，但由于当地某个英雄的荣耀战力榜的分值已经被刷的很高，想要跻身前列，得到一个银牌牌或者金牌牌实在困难，不少玩家便有了更换荣耀战区的想法。本篇文章就王者荣耀更换战区这个问题提供了安卓区和苹果区两套不同的解决方案，亲测有效，希望对小伙伴们有所帮助。</p></li><li><p>本次教程分安卓区和苹果区两个平台，请根据要修改的平台阅读相关内容。</p></li><li><p>首先，这里先声明一个错误的修改方案：</p><div class="tip warning"><p>利用分身多开类软件修改，将会造成账号限时或永久封停的后果</p><p></p></div></li></ul><div class="note success flat"><p>特别强调：王者荣耀战区一周只能修改一次，且只能在<code>每周一</code>修改</p></div><h1 id="安卓区修改教程"><a href="#安卓区修改教程" class="headerlink" title="安卓区修改教程"></a>安卓区修改教程</h1><div class="note primary no-icon flat"><p>所需工具：PC端QQ游戏平台</p></div><ol><li><p>电脑下载QQ游戏平台，下载完成后，在QQ游戏平台中搜索下载王者荣耀手游（同时会自动下载手游模拟器）</p></li><li><p>下载完成后，进入王者荣耀，直接点击右侧<code>虚拟定位</code>，然后用鼠标找到想要更换的战区地点（这里我以内蒙古呼和浩特为例）</p><div class="gallery ">    <p>    <div class="fancybox">        <img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王1.png">    </div><br>    <div class="fancybox">        <img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王2.png">    </div>    </p></div></li><li><p>虚拟位置更改完成后直接进入游戏，打开你的荣耀战区，更新一下新的战区</p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王3.png" width="75%"></li></ol><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王4.png" width="70%"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王5.png" width="70%"><p>若进入游戏后无法点开荣耀战区，则需要点击此处：</p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王7.png" width="70%"><p>如果问题依然不能解决，重新登陆即可。</p><h1 id="苹果区修改教程"><a href="#苹果区修改教程" class="headerlink" title="苹果区修改教程"></a>苹果区修改教程</h1><div class="note primary no-icon flat"><p>所需工具：PC端爱思助手，数据线连接苹果手机</p></div><ol><li><p>打开爱思助手–工具箱–打开虚拟定位</p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王9.png" width="70%"></li><li><p>找到自己需要定位的战区，点击修改虚拟定位</p><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/王10.png" width="70%"><p>此时手机已经暂时处于虚拟定位的状态，只需进入游戏重新定位即可定位想要定位的战区。</p><p>但是，由于手机系统的虚拟定位时间有限，所以请修改完虚拟定位后尽快进游戏更新战区，以免过期无效。</p></li></ol><p><strong><em>以上所提到的方法可保证玩家在一周内锁定在自己想要的战区，如果发现战区又锁定到了实地位置，重新操作即可！！！</em></strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;王者荣耀作为一款近年来十分火爆的游戏，深受各年龄段人群的喜爱。很多玩家更是期望能够提高自己主玩英雄的荣耀战力排名，但由于当</summary>
-      
-    
-    
-    
-    
-    <category term="游戏" scheme="https://ply.cool/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
