@@ -71,16 +71,16 @@
           
           <category> JavaScript </category>
           
-          <category> BOM </category>
-          
-          <category> JSON </category>
-          
       </categories>
       
       
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> BOM </tag>
+            
+            <tag> JSON </tag>
             
         </tags>
       
@@ -154,7 +154,7 @@
           
           <category> 学习笔记 </category>
           
-          <category> JavaScript - DOM </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -162,6 +162,8 @@
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> DOM </tag>
             
         </tags>
       
@@ -189,6 +191,8 @@
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 正则表达式 </tag>
             
         </tags>
       

@@ -94,12 +94,12 @@
     
     <category term="JavaScript" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/"/>
     
-    <category term="BOM" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/BOM/"/>
-    
-    <category term="JSON" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/BOM/JSON/"/>
-    
     
     <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
+    
+    <category term="BOM" scheme="https://ply.cool/tags/BOM/"/>
+    
+    <category term="JSON" scheme="https://ply.cool/tags/JSON/"/>
     
   </entry>
   
@@ -180,10 +180,12 @@
     
     <category term="学习笔记" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="JavaScript - DOM" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript-DOM/"/>
+    <category term="JavaScript" scheme="https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
+    
+    <category term="DOM" scheme="https://ply.cool/tags/DOM/"/>
     
   </entry>
   
@@ -212,6 +214,8 @@
     
     
     <category term="JavaScript" scheme="https://ply.cool/tags/JavaScript/"/>
+    
+    <category term="正则表达式" scheme="https://ply.cool/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
