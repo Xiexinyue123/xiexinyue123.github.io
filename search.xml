@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JavaScript高级 基础知识总结深入</title>
+      <link href="article/6754e5d4.html"/>
+      <url>article/6754e5d4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ol><li><p>基本（值）类型</p><ul><li><p>String</p><p>任意字符串</p></li><li><p>Number</p><p>任意数字</p></li><li><p>boolean</p><p><code>true</code>/<code>false</code> </p></li><li><p>undefined</p><p><code>undefined</code> </p></li><li><p>null</p><p><code>null</code> </p></li></ul></li><li><p>对象（引用）类型</p><ul><li><p>Object</p><p>任意对象</p></li><li><p>Function</p><p>一种特别的对象（封装了一段可执行的具有一定功能的代码）</p></li><li><p>Array</p><p>一种特别的对象（数值下标，内部数据是有序的）</p></li></ul></li></ol><h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><ol><li><p><code>typeof</code> </p><ul><li><p><code>typeof</code>返回数据类型的字符串表达</p></li><li><p>可以判断<code>undefined</code>/数值/字符串/布尔值/<code>function</code> </p></li><li><p>不能判断<code>null</code>与<code>object</code> ，<code>object</code>与<code>array</code> </p><p><img src="https://blog.ply.cool/image/image-20210523222715761.png" alt="image-20210523222715761"></p></li></ul></li><li><p><code>instanceof</code> </p><ul><li><p>翻译：实例</p></li><li><p>判断对象的具体类型</p><p><img src="https://blog.ply.cool/image/image-20210523224412061.png" alt="image-20210523224412061"></p></li></ul></li><li><p><code>===</code> /<code>==</code> </p><ul><li><code>===</code>不会做数据转换</li><li><code>==</code>会做数据转换</li><li><code>===</code>可以判断<code>undefined</code>，<code>null</code> </li></ul></li></ol><ul><li><p>实例对象与类型对象</p><p><img src="https://blog.ply.cool/image/image-20210523225308931.png" alt="image-20210523225308931"></p></li></ul><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol><li><p><code>undefined</code>与<code>null</code>的区别？</p><ul><li><p><code>undefined</code>代表定义未赋值</p></li><li><p><code>null</code>代表定义并赋值了，只是值为<code>null</code> </p><p><img src="https://blog.ply.cool/image/image-20210523230438530.png" alt="image-20210523230438530"></p></li></ul></li><li><p>什么时候给变量赋值为<code>null</code>呢？</p><ul><li><p>初始赋值为<code>null</code>，表明将要赋值为对象</p></li><li><p>结束前，让对象成为垃圾对象（被垃圾回收器回收）</p><p><img src="https://blog.ply.cool/image/image-20210523230455580.png" alt="image-20210523230455580"></p></li></ul></li><li><p>严格区别变量类型与数据类型？</p><ul><li>数据的类型<ul><li>基本类型</li><li>对象类型</li></ul></li><li>变量的类型（变量内存值的类型）<ul><li>基本类型：保存的就是基本类型数据</li><li>引用类型：保存的是地址值</li></ul></li></ul></li></ol><h1 id="数据—变量—内存"><a href="#数据—变量—内存" class="headerlink" title="数据—变量—内存"></a>数据—变量—内存</h1><ul><li><p>什么是数据？</p><p>存储在内存中代表特定信息的‘东东’，本质上是0101….</p><p>数据的特点：可传递，可运算</p></li><li><p>什么是内存？</p><p>内存条在通电后产生的可存储数据的空间（临时的）</p><p>内存产生和死亡：内存条（电路板）==》通电==》产生内存空间==》存储数据==》处理数据==》断电==》内存空间和数据都消失</p><p>内存分类：</p><ul><li>栈：全局变量/局部变量</li><li>堆：对象</li></ul></li><li><p>什么是变量？</p><p>可变化的量，由变量名和变量值组成</p><p>每个变量都对应一块小内存，变量名用来查找对应的内存，变量值就是内存中保存的数据</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Bootstrap学习</title>
       <link href="article/3c3294d3.html"/>
       <url>article/3c3294d3.html</url>
