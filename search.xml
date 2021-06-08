@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Office全家桶激活</title>
+      <link href="article/fbcc472c.html"/>
+      <url>article/fbcc472c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><ul><li>OTP下载请点击这里：<span class="inline-tag red"><a href="https://blog.ply.cool/Office-Tool-with-runtime-v8.1.zip">OTP个人加速下载通道</a></span></li></ul><h1 id="概念解释"><a href="#概念解释" class="headerlink" title="概念解释"></a>概念解释</h1><h2 id="Office-Tool-Plus"><a href="#Office-Tool-Plus" class="headerlink" title="Office Tool Plus"></a>Office Tool Plus</h2><ul><li>简称OTP，OTP是一款万能的Office一站式辅助工具，当你想安装Office办公套件时，选择Office Tool Plus是完美的选择。Office Tool Plus体积非常小，却能卸载旧版本的残留痕迹、自定义选择安装组件、激活Office2019等各个版本。这样，你就不用去找Office各个版本的下载地址、不用担心无法激活Office等。</li></ul><h2 id="Key-Management-Service"><a href="#Key-Management-Service" class="headerlink" title="Key Management Service"></a>Key Management Service</h2><ul><li>简称KMS，KMS是微软官方认可的一种系统激活方式。这个激活方式主要用于企业计算机及微软产品的批量激活。.</li><li>密钥管理服务 (KMS) 允许在本地网络上激活产品。这样，单台计算机不必连接至 Microsoft 便可激活产品。需要将一台计算机配置为 KMS 主机。管理员必须为 KMS 主机输入 KMS 主机密钥。必须激活 KMS 主机密钥并连接至 Microsoft 托管的服务器一次，才能激活。</li></ul><h2 id="OTP和KMS对Office激活的帮助"><a href="#OTP和KMS对Office激活的帮助" class="headerlink" title="OTP和KMS对Office激活的帮助"></a>OTP和KMS对Office激活的帮助</h2><ul><li>打个比方，你有一片干旱的地（未激活的office），你现在需要在这块地上耕作，它必须湿润（激活）。现在水源（KMS主机）已经有了，你就需要将水源引入你的地里。你需要一根水管（OTP），水管里有水流（KMS），这样土地就具备了农作物生长的基本条件（office成功激活）。</li></ul><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><ul><li>OTP内置了一套完备的Office卸载程序，可以卸载有关Office的所有文件</li></ul><ol><li><p>软件主页 &gt; 工具箱 &gt; 修复工具 &gt; 移除Office</p><p><img src="https://blog.ply.cool/image/image-20210608184129153.png" alt="image-20210608184129153"></p><p><img src="https://blog.ply.cool/image/image-20210608184624006.png" alt="image-20210608184624006"></p></li><li><p>等待移除完毕后，有如下反馈：</p><p><img src="https://blog.ply.cool/image/image-20210608185154244.png" alt="image-20210608185154244"></p></li></ol><ul><li><p>附：卸载Office系列并不影响Office的激活状态</p><p>也就是说，如果你的Office本身就是激活状态，再次安装后仍然是激活状态</p></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li><p>软件主页 &gt; 安装Office &gt; 下拉框点击<strong>其它安装选项</strong></p><blockquote><p>如果点击上面的4个版本，会默认下载32位版本，所以如果你是64位系统，请务必点击其他安装选项</p></blockquote><p><img src="https://blog.ply.cool/image/image-20210608190503044.png" alt="image-20210608190503044"></p></li><li><p>本机以2019家庭学生版为例</p><p><img src="https://blog.ply.cool/image/image-20210608190906191.png" alt="image-20210608190906191"></p><ul><li>其它选项默认即可</li></ul></li><li><p>若想要安装Office其它产品（比如Visio）</p><p><img src="https://blog.ply.cool/image/image-20210608192816724.png" alt="image-20210608192816724"></p></li><li><p>确认无误后，开始部署。等待软件上方进度条完成，跳转微软安装程序完成即安装成功</p></li></ol><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><ul><li><p>下载完成后，可以先在 主页 &gt; 激活中查看激活状态</p></li><li><p>等待操作完成后，在操作结果中查看Office是否处于激活状态</p><p><img src="https://blog.ply.cool/image/image-20210608193837141.png" alt="image-20210608193837141"></p></li><li><p>若显示未激活，则进行激活操作</p></li></ul><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ol><li><p>安装对应许可证</p></li><li><p>在KMS管理中输入KMS主机地址，保存设置</p></li><li><p>点击右上方激活</p><p><img src="https://blog.ply.cool/image/image-20210608195047853.png" alt="image-20210608195047853"></p></li><li><p>重新查看激活信息</p><p><img src="https://blog.ply.cool/image/image-20210608195905914.png" alt="image-20210608195905914"></p><p>可以看到，我们所应用的激活已经生效，不过只有180天</p><p>但是，KMS主机地址是可以重复使用的，也就是说只要它提醒到期，我们就可以重新激活继续使用，这样，理论上我们的Office全家桶就可以无限期使用了</p></li></ol><h3 id="KMS主机地址哪里找？"><a href="#KMS主机地址哪里找？" class="headerlink" title="KMS主机地址哪里找？"></a>KMS主机地址哪里找？</h3><ul><li><p>在百度，知乎，CSDN中，你几乎都可以找到</p></li><li><p>这里提供一些KMS主机地址供大家使用</p><table><thead><tr><th align="center">kms.loli.best（自用）</th></tr></thead><tbody><tr><td align="center">kms.loli.beer</td></tr><tr><td align="center">kms.iaini.net</td></tr><tr><td align="center">kms.03k.org</td></tr><tr><td align="center">kms.cangshui.net</td></tr><tr><td align="center">kms.cary.tech</td></tr><tr><td align="center">kms.catqu.com</td></tr><tr><td align="center">kms.cgtsoft.com</td></tr><tr><td align="center">kms.ghpym.com</td></tr></tbody></table></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发工具 </category>
+          
+          <category> Office </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Office </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jQuery 核心函数与对象</title>
       <link href="article/95e80f98.html"/>
       <url>article/95e80f98.html</url>
