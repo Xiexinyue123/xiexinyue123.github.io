@@ -1,0 +1,637 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Node.js学习笔记 | 百般美好</title><meta name="keywords" content="Node.js"><meta name="author" content="Coder.Xie"><meta name="copyright" content="Coder.Xie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="命令行窗口常用指令 dir 列出当前目录下的所有文件 cd 目录名进入到指定的目录 md创建文件夹 rd删除文件夹  目录 .表示当前目录 ..表示上一级目录  环境变量（windows系统中的变量） 当我们在命令行窗口打开一个文件，或调用一个程序时 系统会首先在当前目录下寻找文件程序，如果找到了则直接打开 如果没有找到则会依次到环境变量path的路径中寻找，直到找到为止 如果没有则报错   No">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js学习笔记">
+<meta property="og:url" content="https://ply.cool/article/1aafa723.html">
+<meta property="og:site_name" content="百般美好">
+<meta property="og:description" content="命令行窗口常用指令 dir 列出当前目录下的所有文件 cd 目录名进入到指定的目录 md创建文件夹 rd删除文件夹  目录 .表示当前目录 ..表示上一级目录  环境变量（windows系统中的变量） 当我们在命令行窗口打开一个文件，或调用一个程序时 系统会首先在当前目录下寻找文件程序，如果找到了则直接打开 如果没有找到则会依次到环境变量path的路径中寻找，直到找到为止 如果没有则报错   No">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.ply.cool/image/node.jpg">
+<meta property="article:published_time" content="2021-06-11T07:08:40.000Z">
+<meta property="article:modified_time" content="2021-06-11T07:08:40.000Z">
+<meta property="article:author" content="Coder.Xie">
+<meta property="article:tag" content="Node.js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.ply.cool/image/node.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG"><link rel="canonical" href="https://ply.cool/article/1aafa723"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: {"text":"啾咪,LOVE,YOU","fontSize":"15px"},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-06-11 15:08:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://blog.ply.cool/style/pool.min.css"><link rel="stylesheet" href="https://blog.ply.cool/style/iconfont.min.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="百般美好" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/course/"><i class="fa-fw iconfont icon-icon_live"></i><span> 课程推荐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://blog.ply.cool/image/node.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">百般美好</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/course/"><i class="fa-fw iconfont icon-icon_live"></i><span> 课程推荐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://music.ply.cool/"><i class="fa-fw fa fa-gamepad"></i><span> 娱乐</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-bars"></i><span> 管理</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="http://image.avosapps.us/"><i class="fa-fw far fa-comment-dots"></i><span> Valine评论管理页面</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://console.leancloud.app/login.html#/signin"><i class="fa-fw fas fa-desktop"></i><span> Leancloud管理页面</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">Node.js学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-06-11T07:08:40.000Z" title="undefined 2021-06-11 15:08:40">2021-06-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Node-js/">Node.js</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/article/1aafa723.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/article/1aafa723.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="命令行窗口"><a href="#命令行窗口" class="headerlink" title="命令行窗口"></a>命令行窗口</h1><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><ul>
+<li><code>dir</code> 列出当前目录下的所有文件</li>
+<li><code>cd 目录名</code>进入到指定的目录</li>
+<li><code>md</code>创建文件夹</li>
+<li><code>rd</code>删除文件夹</li>
+</ul>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><code>.</code>表示当前目录</li>
+<li><code>..</code>表示上一级目录</li>
+</ul>
+<h2 id="环境变量（windows系统中的变量）"><a href="#环境变量（windows系统中的变量）" class="headerlink" title="环境变量（windows系统中的变量）"></a>环境变量（windows系统中的变量）</h2><ul>
+<li><p>当我们在命令行窗口打开一个文件，或调用一个程序时</p>
+<p>系统会首先在当前目录下寻找文件程序，如果找到了则直接打开</p>
+<p>如果没有找到则会依次到环境变量path的路径中寻找，直到找到为止</p>
+<p>如果没有则报错</p>
+</li>
+</ul>
+<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><ul>
+<li>一个能够在服务器端运行JavaScript代码的运行环境。</li>
+</ul>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul>
+<li><p>在node中，一个js文件就是一个模块</p>
+</li>
+<li><p>在node中，通过require()函数来引入外部模块</p>
+<ul>
+<li>require()可以传递一个文件的路径作为参数，node将会自动根据该路径来引入外部模块</li>
+<li>这里路径，如果使用相对路径，必须以.或..开头</li>
+<li>使用require()引入模块后，该函数会返回一个对象，这个对象代表的是引入的模块</li>
+</ul>
+</li>
+<li><p>每一个js文件中的js代码都是独立运行在一个函数中</p>
+<p>而不是全局作用域，所以一个模块中的变量和函数在其它模块中无法访问</p>
+</li>
+</ul>
+<h2 id="导出变量和函数"><a href="#导出变量和函数" class="headerlink" title="导出变量和函数"></a>导出变量和函数</h2><ul>
+<li><p>使用exports</p>
+<ul>
+<li><code>exports.属性 = 属性值;</code></li>
+<li><code>exports.方法 = 函数;</code></li>
+</ul>
+</li>
+<li><p>使用module.exports</p>
+<ul>
+<li><code>module.exports.属性 = 属性值;</code></li>
+<li><code>module.exports.方法 = 函数;</code></li>
+<li><code>module.exports = &#123;&#125;;</code></li>
+</ul>
+</li>
+<li><p>可以通过exports来向外部暴露变量和方法</p>
+<ul>
+<li>只需要将需要暴露给外部的变量或方法设置为exports的属性即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;hello,我是test.js&quot;);</span><br><span class="line">exports.x &#x3D; &quot;我是test.js中的x&quot;;</span><br><span class="line">exports.y &#x3D; &quot;我是y&quot;;</span><br><span class="line">exports.fn &#x3D; function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const test &#x3D; require(&#39;.&#x2F;test&#39;);</span><br><span class="line">console.log(test);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<p><img src="https://blog.ply.cool/image/image-20210611164918970.png" alt="image-20210611164918970"></p>
+</li>
+<li><p>模块分为两大类：</p>
+<ul>
+<li>核心模块<ul>
+<li>由node引擎提供的模块</li>
+<li>核心模块的标识就是模块的名字</li>
+</ul>
+</li>
+<li>文件模块<ul>
+<li>由用户自己创建的模块</li>
+<li>文件模块的标识就是文件的路径</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在node中有一个全局对象global，它的作用和网页中window类似</p>
+<ul>
+<li>在全局中创建的变量都会作为global的属性保存</li>
+<li>在全局中创建的函数都会作为global的方法保存</li>
+</ul>
+</li>
+<li><p>实际上模块中的代码都是封装在一个函数中执行的，并且在函数执行时，同时传进了5个实参</p>
+<ul>
+<li>exports<ul>
+<li>该对象用来将变量或函数暴露到外部</li>
+</ul>
+</li>
+<li>require<ul>
+<li>函数，用来引入外部的模块</li>
+</ul>
+</li>
+<li>module<ul>
+<li>代表当前模块本身</li>
+<li>exports就是module的属性</li>
+<li>既可以使用exports导出，也可以使用module.exports导出</li>
+</ul>
+</li>
+<li>_filename<ul>
+<li>当前模块的完整路径</li>
+</ul>
+</li>
+<li>_dirname<ul>
+<li>当前模块所在文件夹的路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="模块的标识"><a href="#模块的标识" class="headerlink" title="模块的标识"></a>模块的标识</h1><ul>
+<li><p>对于核心模块（npm中下载的模块），直接使用模块的名字进行引入</p>
+<p><code>const math = require(&#39;math&#39;);</code></p>
+</li>
+<li><p>对于自定义的文件模块，需要通过文件的路径来对模块进行引入</p>
+<ul>
+<li><p>路径可以是绝对路径，也可以是相对路径，必须以<code>./</code>或<code>../</code>开头</p>
+<p><code>const test = require(&#39;./test&#39;);</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="包（package）"><a href="#包（package）" class="headerlink" title="包（package）"></a>包（package）</h1><ul>
+<li>包实际上就是一个压缩文件，解压后还原为目录<ul>
+<li>package.json    描述文件</li>
+<li>bin    可执行的二进制文件</li>
+<li>lib    js代码</li>
+<li>doc    文档</li>
+<li>test     单元测试</li>
+</ul>
+</li>
+</ul>
+<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><ul>
+<li>node包管理器</li>
+<li>通过npm下载的包都在node_modules文件夹中</li>
+</ul>
+<p><img src="https://blog.ply.cool/image/image-20210611185309458.png" alt="image-20210611185309458"></p>
+<h2 id="npm的命令"><a href="#npm的命令" class="headerlink" title="npm的命令"></a>npm的命令</h2><ul>
+<li><code>npm -v</code> 查看npm的版本</li>
+<li><code>npm version</code> 查看所有模块的版本</li>
+<li><code>npm search 包名</code>搜索包</li>
+<li><code>npm install / i 包名</code>安装包</li>
+<li><code>npm remove / r 包名</code>删除包</li>
+<li><code>npm install 包名 --save</code>安装包并添加到依赖中（用得最多）</li>
+<li><code>npm install</code>下载当前项目所依赖的包</li>
+<li><code>npm install 包名 -g</code>全局安装包（全局安装的包一般都是一些工具）</li>
+</ul>
+<h2 id="指定文件作为包"><a href="#指定文件作为包" class="headerlink" title="指定文件作为包"></a>指定文件作为包</h2><ul>
+<li><p>要先在这个文件夹中<code>npm init</code>初始化这个文件夹，使它有<code>package.json</code>，直接跳过初始化操作可以<code>npm init -y</code> </p>
+<p>这样才可以将包引入到指定文件中</p>
+</li>
+</ul>
+<h2 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h2><ul>
+<li>淘宝镜像npm，解决npm服务器在国外造成的一系列问题，但是（只读）只能下载</li>
+</ul>
+<h1 id="Buffer（缓冲区）"><a href="#Buffer（缓冲区）" class="headerlink" title="Buffer（缓冲区）"></a>Buffer（缓冲区）</h1><ul>
+<li><p>结构和数组很像，操作的方法也和数组类似</p>
+</li>
+<li><p>数组中不能存储二进制文件，而buffer就是专门用来存储二进制的数据</p>
+</li>
+<li><p>使用buffer不需要引入模块，直接使用即可</p>
+</li>
+<li><p>在buffer中存储的数据都是二进制数据，但是在显示时都是以十六进制的形式展示</p>
+</li>
+<li><p>buffer中每一个元素的范围都是从00 - ff（ 十进制：0-255）（二进制：00000000 - 11111111）</p>
+<p>计算机 一个0或1 我们称1位（bit）</p>
+<p>8bit = 1byte（字节）</p>
+<p>buffer中的每一个元素，占用内存一个字节</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello Atguigu&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> buf = Buffer.from(str);</span><br><span class="line"><span class="built_in">console</span>.log(buf);</span><br><span class="line"><span class="built_in">console</span>.log(buf.length);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p><img src="https://blog.ply.cool/image/image-20210611191440701.png" alt="image-20210611191440701"></p>
+</li>
+<li><p><code>Buffer.from(str)</code>将一个字符串转换为buffer</p>
+</li>
+<li><p><code>Buffer.alloc(size)</code>创建一个指定大小的buffer</p>
+</li>
+<li><p><code>Buffer.allocUnsafe(size)</code>创建一个指定大小的buffer，可能包含敏感数据</p>
+</li>
+<li><p><code>buf.toString()</code>将缓冲区中的数据转换为字符串</p>
+</li>
+</ul>
+<h2 id="创建指定大小的buffer"><a href="#创建指定大小的buffer" class="headerlink" title="创建指定大小的buffer"></a>创建指定大小的buffer</h2><ul>
+<li><p>buffer构造函数都是不推荐使用的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf = Buffer.alloc(<span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(buf);</span><br><span class="line">buf[<span class="number">0</span>] = <span class="number">88</span>;</span><br><span class="line">buf[<span class="number">1</span>] = <span class="number">255</span>;</span><br><span class="line">buf[<span class="number">2</span>] = <span class="number">0xaa</span>;</span><br><span class="line"><span class="built_in">console</span>.log(buf);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p><img src="https://blog.ply.cool/image/image-20210611192041110.png" alt="image-20210611192041110"></p>
+</li>
+<li><p>buffer大小一旦确定，不能改变</p>
+</li>
+<li><p>只要数字在控制台或页面中输出，一定是十进制</p>
+</li>
+</ul>
+<h1 id="fs（文件系统）"><a href="#fs（文件系统）" class="headerlink" title="fs（文件系统）"></a>fs（文件系统）</h1><h2 id="文件系统（File-System）"><a href="#文件系统（File-System）" class="headerlink" title="文件系统（File System）"></a>文件系统（File System）</h2><ul>
+<li>文件系统简单来说就是通过Node来操作系统中的文件</li>
+<li>使用文件系统，需要先引入fs模块，fs是核心模块，直接引入不需要下载</li>
+</ul>
+<p><img src="https://blog.ply.cool/image/image-20210611194040434.png" alt="image-20210611194040434"></p>
+<h2 id="同步文件的写入"><a href="#同步文件的写入" class="headerlink" title="同步文件的写入"></a>同步文件的写入</h2><ol>
+<li><p>打开文件</p>
+<p><code>fs.openSync(path, flags[, mode])</code></p>
+<ul>
+<li>path：要打开文件的路径</li>
+<li>flags：打开文件要做的操作类型<ul>
+<li>r：只读</li>
+<li>w：可写</li>
+</ul>
+</li>
+<li>mode：设置文件的操作权限，一般不传</li>
+<li>返回值<ul>
+<li>该方法会返回一个文件描述符作为结果，我们可以通过该描述符来对文件名进行各种操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>向文件中写入内容</p>
+<p><code>fs.writeSync(fd, String[, position,[, encoding]])</code></p>
+<ul>
+<li>fd     文件的描述符，需要传入要写入的文件的描述符</li>
+<li>string    要写入的内容</li>
+<li>position   写入的起始位置</li>
+<li>encoding     写入的编码，默认UTF-8</li>
+</ul>
+</li>
+<li><p>保存并关闭文件</p>
+<p><code>fs.closeSync(fd);</code></p>
+<ul>
+<li>fd     要关闭的文件的描述符</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">//打开文件</span></span><br><span class="line"><span class="keyword">var</span> fd = fs.openSync(<span class="string">&quot;hello.txt&quot;</span>,<span class="string">&quot;w&quot;</span>);</span><br><span class="line"><span class="comment">//向文件中写入内容</span></span><br><span class="line">fs.writeSync(fd, <span class="string">&quot;今天天气真不错！&quot;</span>);</span><br><span class="line"><span class="comment">//关闭文件</span></span><br><span class="line">fs.closeSync(fd);</span><br></pre></td></tr></table></figure>
+
+<h2 id="异步文件写入"><a href="#异步文件写入" class="headerlink" title="异步文件写入"></a>异步文件写入</h2><ol>
+<li><p>打开文件</p>
+<p><code>fs.open(path, flags[, mode], callback)</code> </p>
+<ul>
+<li><p>path：要打开文件的路径</p>
+</li>
+<li><p>异步调用的方法，结果都是通过回调函数的参数返回的</p>
+</li>
+<li><p>回调函数两个参数：</p>
+<ul>
+<li>err    错误对象</li>
+<li>fd   文件描述符</li>
+</ul>
+</li>
+<li><p>flags：打开文件要做的操作类型</p>
+<ul>
+<li>r：只读</li>
+<li>w：可写</li>
+</ul>
+</li>
+<li><p>mode：设置文件的操作权限，一般不传</p>
+</li>
+</ul>
+</li>
+<li><p>向文件中写入内容</p>
+<p><code>fs.write(fd, String[, position,[, encoding]], callback)</code></p>
+<ul>
+<li>用来异步写入一个文件</li>
+</ul>
+</li>
+<li><p>关闭文件</p>
+<p><code>fs.close(fd, callback)</code></p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">//打开文件</span></span><br><span class="line">fs.open(<span class="string">&quot;hello.txt&quot;</span>,<span class="string">&quot;w&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,fd</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">        <span class="comment">//如果没有出错，写入操作</span></span><br><span class="line">        fs.write(fd,<span class="string">&quot;这是异步写入的内容&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&quot;写入成功~~&quot;</span>);</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="comment">//关闭</span></span><br><span class="line">            fs.close(fd, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">&quot;文件已关闭~~&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;程序向下执行~~~&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Coder.Xie</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ply.cool/article/1aafa723.html">https://ply.cool/article/1aafa723.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ply.cool" target="_blank">百般美好</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Node-js/">Node.js</a></div><div class="post_share"><div class="social-share" data-image="https://blog.ply.cool/image/node.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/article/fbcc472c.html"><img class="next-cover" src="https://blog.ply.cool/image/office.jpeg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Office全家桶激活</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/1163.PNG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Coder.Xie</div><div class="author-info__description">一个收藏回忆与记录学习的地方！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://www.ply.cool"><i class="far fa-paper-plane"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message/?Menu=yes&amp;amp;uin=1532518617&amp;amp;Service=300&amp;amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" target="_blank" title="QQ"><i class="iconfont icon-QQ2"></i></a><a class="social-icon" href="https://github.com/Xiexinyue123" target="_blank" title="Github"><i class="iconfont icon-github2"></i></a><a class="social-icon" href="https://space.bilibili.com/477602535" target="_blank" title="bilibili"><i class="iconfont icon-bilibili1"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><div>欢迎访问我的个人博客！</div><br><img src="https://cdn.jsdelivr.net/gh/lete114/CDN/Use/my_bg.gif"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AA%97%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">命令行窗口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">1.1.</span> <span class="toc-text">常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88windows%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">环境变量（windows系统中的变量）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">2.</span> <span class="toc-text">Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">2.1.</span> <span class="toc-text">模块化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">导出变量和函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E6%A0%87%E8%AF%86"><span class="toc-number">3.</span> <span class="toc-text">模块的标识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%85%EF%BC%88package%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">包（package）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm"><span class="toc-number">5.</span> <span class="toc-text">npm</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">5.1.</span> <span class="toc-text">npm的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E4%BD%9C%E4%B8%BA%E5%8C%85"><span class="toc-number">5.2.</span> <span class="toc-text">指定文件作为包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cnpm"><span class="toc-number">5.3.</span> <span class="toc-text">cnpm</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Buffer%EF%BC%88%E7%BC%93%E5%86%B2%E5%8C%BA%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">Buffer（缓冲区）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E5%A4%A7%E5%B0%8F%E7%9A%84buffer"><span class="toc-number">6.1.</span> <span class="toc-text">创建指定大小的buffer</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fs%EF%BC%88%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">fs（文件系统）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%88File-System%EF%BC%89"><span class="toc-number">7.1.</span> <span class="toc-text">文件系统（File System）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E5%85%A5"><span class="toc-number">7.2.</span> <span class="toc-text">同步文件的写入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5"><span class="toc-number">7.3.</span> <span class="toc-text">异步文件写入</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/1aafa723.html" title="Node.js学习笔记"><img src="https://blog.ply.cool/image/node.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Node.js学习笔记"/></a><div class="content"><a class="title" href="/article/1aafa723.html" title="Node.js学习笔记">Node.js学习笔记</a><time datetime="2021-06-11T07:08:40.000Z" title="发表于 2021-06-11 15:08:40">2021-06-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/fbcc472c.html" title="Office全家桶激活"><img src="https://blog.ply.cool/image/office.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Office全家桶激活"/></a><div class="content"><a class="title" href="/article/fbcc472c.html" title="Office全家桶激活">Office全家桶激活</a><time datetime="2021-06-08T04:19:11.000Z" title="发表于 2021-06-08 12:19:11">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/95e80f98.html" title="jQuery 核心函数与对象"><img src="https://blog.ply.cool/image/1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jQuery 核心函数与对象"/></a><div class="content"><a class="title" href="/article/95e80f98.html" title="jQuery 核心函数与对象">jQuery 核心函数与对象</a><time datetime="2021-06-06T14:22:05.000Z" title="发表于 2021-06-06 22:22:05">2021-06-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/c1e02dc1.html" title="初识jQuery"><img src="https://blog.ply.cool/image/1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="初识jQuery"/></a><div class="content"><a class="title" href="/article/c1e02dc1.html" title="初识jQuery">初识jQuery</a><time datetime="2021-05-30T03:05:25.000Z" title="发表于 2021-05-30 11:05:25">2021-05-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/660230df.html" title="JavaScript高级 对象高级"><img src="https://cdn.jsdelivr.net/gh/Xiexinyue123/image/js.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript高级 对象高级"/></a><div class="content"><a class="title" href="/article/660230df.html" title="JavaScript高级 对象高级">JavaScript高级 对象高级</a><time datetime="2021-05-28T11:20:14.000Z" title="发表于 2021-05-28 19:20:14">2021-05-28</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Coder.Xie</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referra"><img style="position:relative;top:-2px; " src="https://cdn.jsdelivr.net/gh/xingjiahui/CDN/又拍云_logo.png"align="absmiddle" width="59px" height="30px" /></a><span>提供全站加速服务</span><p><a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/"><img src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-white?style=flat&logo=appveyor" title="本站使用又拍云提供CDN全球加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/"><img src="https://img.shields.io/badge/%E4%BA%91%E5%AD%98%E5%82%A8-%E5%8F%88%E6%8B%8D%E4%BA%91-white?style=flat&logo=appveyor" title="本站使用又拍云云存储提供图片及视频加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png" alt="ICP"/><span>鄂ICP备20010598号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const friends = 'https://www.isk.ink,https://www.isk.ink/,https://plushine.cn,https://plushine.cn/,https://www.meilinfeng.top,https://www.meilinfeng.top/,https://euukey.com,https://euukey.com/,https://blog.lete114.top,https://blog.lete114.top/,https://snow.js.org,https://snow.js.org/,https://kali.js.org,https://kali.js.org/,https://lyuan.co,https://lyuan.co/,https://blog.zhheo.com,https://blog.zhheo.com/,http://byelmx.com,http://byelmx.com/,https://zykj.js.org,https://zykj.js.org/,https://blog.molipre.com,https://blog.molipre.com/,https://sutianxin.top/,https://sutianxin.top,https://www.ply.cool,https://www.ply.cool/,https://plycool.gitee.io/birthday/,https://plycool.gitee.io/birthday'.split(',');  //将获取的友链地址存入变量friends中
+    let initData = {
+      el: '#vcomment',
+      appId: 'SD5GEXmh0G0B2d580ugPOGgV-MdYXbMMI',
+      appKey: '9qqyOvaiiqQXA9di0UCTGuiJ',
+      placeholder: '昵称栏中输入您的QQ账号然后按Tab键可自动获取您的QQ昵称，并自动将邮箱栏填写为您的QQ邮箱，评论后请注意稍后在您的QQ邮箱中将收到我的回复！！！ヾﾉ≧∀≦)o来啊，快活啊!',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://SD5GEXmh.api.lncldglobal.com',
+      emojiCDN: '',
+      emojiMaps: {"傲娇":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409103906.webp",
+      "开心":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409104757.webp",
+      "拍手手":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130304.webp",
+      "得瑟":"https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130258.webp",
+      "吃瓜":"https://pic3.zhimg.com/v2-0862a36e96dcd4b0eb8aaa6a724434ca_b.gif",
+      "自闭了":"https://pic1.zhimg.com/v2-31e18866441a228f7aaf5b63775feb34_b.gif",
+      "点赞":"https://pic1.zhimg.com/v2-35eeb1d14b56b7b43aac45055f75eaa8_b.gif",
+      "猥琐萌_12" : "https://pic3.zhimg.com/v2-1ced686ce3147ae0dcf3b4c44af64b66_b.gif",
+      "猥琐萌_13" : "https://pic4.zhimg.com/v2-9a7df92798c0e20752aa74e4cc5466cb_b.gif",
+      "bilibili_tv_gif-doge": "https://7.dusays.com/2021/01/15/3de5568861758.gif",
+      "bilibili_tv_gif-亲亲": "https://7.dusays.com/2021/01/15/48f8fb39734fd.gif",
+      "bilibili_tv_gif-偷笑": "https://7.dusays.com/2021/01/15/f7272fe624fae.gif",
+      "bilibili_tv_gif-再见": "https://7.dusays.com/2021/01/15/8252ffdb2cd6c.gif",
+      "bilibili_tv_gif-发怒": "https://7.dusays.com/2021/01/15/6fc804d102f33.gif",
+      "bilibili_tv_gif-发财": "https://7.dusays.com/2021/01/15/934731e956a6d.gif",
+      "bilibili_tv_gif-可爱": "https://7.dusays.com/2021/01/15/df742ca600b6f.gif",
+      "bilibili_tv_gif-吐血": "https://7.dusays.com/2021/01/15/825e474035d41.gif",
+      "bilibili_tv_gif-呆": "https://7.dusays.com/2021/01/15/dc01b83c8b63c.gif",
+      "bilibili_tv_gif-呕吐": "https://7.dusays.com/2021/01/15/e84d2b2f164d5.gif",
+      "bilibili_tv_gif-困": "https://7.dusays.com/2021/01/15/1ebb4265e35d6.gif",
+      "bilibili_tv_gif-坏笑": "https://7.dusays.com/2021/01/15/0d4b84c868ac1.gif",
+      "bilibili_tv_gif-大佬": "https://7.dusays.com/2021/01/15/554bc754252fb.gif",
+      "bilibili_tv_gif-大哭": "https://7.dusays.com/2021/01/15/a61cf83e2a393.gif",
+      "bilibili_tv_gif-委屈": "https://7.dusays.com/2021/01/15/bb706ad009ca3.gif",
+      "bilibili_tv_gif-害羞": "https://7.dusays.com/2021/01/15/6783d7b3f85b5.gif",
+      "bilibili_tv_gif-尴尬": "https://7.dusays.com/2021/01/15/94fde68114d10.gif",
+      "bilibili_tv_gif-微笑": "https://7.dusays.com/2021/01/15/ae8b966f5d6dd.gif",
+      "bilibili_tv_gif-思考": "https://7.dusays.com/2021/01/15/4779160502ea4.gif",
+      "bilibili_tv_gif-惊吓": "https://7.dusays.com/2021/01/15/cf308976cfcff.gif",
+      "bilibili_tv_gif-打脸": "https://7.dusays.com/2021/01/15/1e73ac65adedb.gif",
+      "bilibili_tv_gif-抓狂": "https://7.dusays.com/2021/01/15/a9a2816b47155.gif",
+      "bilibili_tv_gif-抠鼻子": "https://7.dusays.com/2021/01/15/da0e09a7df77c.gif",
+      "bilibili_tv_gif-斜眼笑": "https://7.dusays.com/2021/01/15/ef02f8604d8da.gif",
+      "bilibili_tv_gif-无奈": "https://7.dusays.com/2021/01/15/34f110a029e9f.gif",
+      "bilibili_tv_gif-晕": "https://7.dusays.com/2021/01/15/3c1ec79da1798.gif",
+      "bilibili_tv_gif-流汗": "https://7.dusays.com/2021/01/15/f8476b1819899.gif",
+      "bilibili_tv_gif-流鼻血": "https://7.dusays.com/2021/01/15/0c7f2fc4aa9ac.gif",
+      "bilibili_tv_gif-点赞": "https://7.dusays.com/2021/01/15/3a52c830b19d1.gif",
+      "bilibili_tv_gif-生气": "https://7.dusays.com/2021/01/15/52386ddb3e00b.gif",
+      "bilibili_tv_gif-生病": "https://7.dusays.com/2021/01/15/a196e70f1892d.gif",
+      "bilibili_tv_gif-疑问": "https://7.dusays.com/2021/01/15/5df1be7cebfcc.gif",
+      "bilibili_tv_gif-白眼": "https://7.dusays.com/2021/01/15/dde92b9d44d0a.gif",
+      "bilibili_tv_gif-睡着": "https://7.dusays.com/2021/01/15/fde17be95e29a.gif",
+      "bilibili_tv_gif-笑哭": "https://7.dusays.com/2021/01/15/6c2742bef700b.gif",
+      "bilibili_tv_gif-腼腆": "https://7.dusays.com/2021/01/15/c23c85b649289.gif",
+      "bilibili_tv_gif-色": "https://7.dusays.com/2021/01/15/f75d5f33ae1df.gif",
+      "bilibili_tv_gif-调皮": "https://7.dusays.com/2021/01/15/1d06267e48ecb.gif",
+      "bilibili_tv_gif-鄙视": "https://7.dusays.com/2021/01/15/5696d02abd653.gif",
+      "bilibili_tv_gif-闭嘴": "https://7.dusays.com/2021/01/15/1f90ef05d7af2.gif",
+      "bilibili_tv_gif-难过": "https://7.dusays.com/2021/01/15/7535d32a53d50.gif",
+      "bilibili_tv_gif-馋": "https://7.dusays.com/2021/01/15/13375b80ddacb.gif",
+      "bilibili_tv_gif-黑人问号": "https://7.dusays.com/2021/01/15/48f24129bf37c.gif",
+      "bilibili_tv_gif-鼓掌": "https://7.dusays.com/2021/01/15/d7e60de1a2e5b.gif",
+      "Cute_Emoji-001": "https://7.dusays.com/2021/01/15/32cb78e3cd7c7.png",
+      "Cute_Emoji-002": "https://7.dusays.com/2021/01/15/53a8d52352146.png",
+      "Cute_Emoji-003": "https://7.dusays.com/2021/01/15/f900e73007f85.png",
+      "Cute_Emoji-004": "https://7.dusays.com/2021/01/15/b40a1b14aa1a0.png",
+      "Cute_Emoji-005": "https://7.dusays.com/2021/01/15/d905bb0744a87.png",
+      "Cute_Emoji-006": "https://7.dusays.com/2021/01/15/7dbc6721bad89.png",
+      "Cute_Emoji-007": "https://7.dusays.com/2021/01/15/2fb4fbb4c742a.png",
+      "Cute_Emoji-008": "https://7.dusays.com/2021/01/15/0e0a48fe7f48b.png",
+      "Cute_Emoji-009": "https://7.dusays.com/2021/01/15/9d9438b559f33.png",
+      "Cute_Emoji-010": "https://7.dusays.com/2021/01/15/9c51159cddb6d.png",
+      "Cute_Emoji-011": "https://7.dusays.com/2021/01/15/959c63a22b0b3.png",
+      "Cute_Emoji-012": "https://7.dusays.com/2021/01/15/41703b35005a8.png",
+      "Cute_Emoji-013": "https://7.dusays.com/2021/01/15/2a30820e95e35.png",
+      "Cute_Emoji-014": "https://7.dusays.com/2021/01/15/2e72496d9c6e0.png",
+      "Cute_Emoji-015": "https://7.dusays.com/2021/01/15/752a5d910377a.png",
+      "Cute_Emoji-016": "https://7.dusays.com/2021/01/15/c0e05803df947.png",
+      "Cute_Emoji-017": "https://7.dusays.com/2021/01/15/76dea70f28eed.png",
+      "Cute_Emoji-018": "https://7.dusays.com/2021/01/15/a1fa32dda5679.png",
+      "Cute_Emoji-019": "https://7.dusays.com/2021/01/15/7a32c50b9933c.png",
+      "Cute_Emoji-020": "https://7.dusays.com/2021/01/15/1e81e27c0c465.png",
+      "Cute_Emoji-021": "https://7.dusays.com/2021/01/15/0a370f8400a90.png",
+      "Cute_Emoji-022": "https://7.dusays.com/2021/01/15/98d9b3e3e050c.png",
+      "Cute_Emoji-023": "https://7.dusays.com/2021/01/15/1201192686499.png",
+      "Cute_Emoji-024": "https://7.dusays.com/2021/01/15/bed85def0bd54.png",
+      "Cute_Emoji-025": "https://7.dusays.com/2021/01/15/b613e8ed34d3b.png",
+      "Cute_Emoji-026": "https://7.dusays.com/2021/01/15/961acd7c79684.png",
+      "Cute_Emoji-027": "https://7.dusays.com/2021/01/15/cfe2ee0d9b34e.png",
+      "Cute_Emoji-028": "https://7.dusays.com/2021/01/15/4c381a285f7f6.png",
+      "Cute_Emoji-029": "https://7.dusays.com/2021/01/15/460ddbc6696e9.png",
+      "Cute_Emoji-030": "https://7.dusays.com/2021/01/15/84248b3d95404.png",
+      "Cute_Emoji-031": "https://7.dusays.com/2021/01/15/078d1936ddf32.png",
+      "Cute_Emoji-032": "https://7.dusays.com/2021/01/15/99dab6b8c18a7.png",
+      "Cute_Emoji-033": "https://7.dusays.com/2021/01/15/7918cd6164292.png",
+      "Cute_Emoji-034": "https://7.dusays.com/2021/01/15/87ad3a013e871.png",
+      "Cute_Emoji-035": "https://7.dusays.com/2021/01/15/3f1a86c533d83.png",
+      "Cute_Emoji-036": "https://7.dusays.com/2021/01/15/b26c24c7d65af.png",
+      "Cute_Emoji-037": "https://7.dusays.com/2021/01/15/dbc090b98d3f8.png",
+      "Cute_Emoji-038": "https://7.dusays.com/2021/01/15/9a1b799dfc480.png",
+      "Cute_Emoji-039": "https://7.dusays.com/2021/01/15/86a1938b78577.png",
+      "Cute_Emoji-040": "https://7.dusays.com/2021/01/15/0c66da8883f5d.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+      master: 'https://ply.cool',  //主题根目录配置文件获取博主地址
+      friends: friends,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('/js/valine.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="5362271346" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" data-loop="all" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/SerokSSR/cdn/meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
