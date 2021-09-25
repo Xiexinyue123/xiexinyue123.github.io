@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ply.cool/article/c8202765.html</loc>
+    
+    <lastmod>2021-09-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ply.cool/talking/index.html</loc>
     
     <lastmod>2021-06-17</lastmod>
@@ -275,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://ply.cool/messageboard/index.html</loc>
+    <loc>https://ply.cool/course/index.html</loc>
     
     <lastmod>2020-05-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ply.cool/course/index.html</loc>
+    <loc>https://ply.cool/messageboard/index.html</loc>
     
     <lastmod>2020-05-22</lastmod>
     
@@ -319,7 +326,7 @@
 
   <url>
     <loc>https://ply.cool/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -327,161 +334,168 @@
   
   <url>
     <loc>https://ply.cool/tags/C/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/HTML/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E8%A1%A8%E5%8D%95/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/JavaScript/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/BOM/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/JSON/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E5%8E%9F%E5%9E%8B/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E9%97%AD%E5%8C%85/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/Java/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/Less/</loc>
-    <lastmod>2021-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ply.cool/tags/Office/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/Node-js/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/tags/Office/</loc>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/VS-Code/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/tags/Vue/</loc>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/jQuery/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E5%88%9D/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/Bootstrap/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/tags/DOM/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -490,98 +504,105 @@
   
   <url>
     <loc>https://ply.cool/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/QQ%E8%BD%B0%E7%82%B8/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaScript/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Less/</loc>
-    <lastmod>2021-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ply.cool/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Node-js/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Vue/</loc>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/jQuery/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Office/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ply.cool/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Bootstrap/</loc>
-    <lastmod>2021-09-24</lastmod>
+    <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
